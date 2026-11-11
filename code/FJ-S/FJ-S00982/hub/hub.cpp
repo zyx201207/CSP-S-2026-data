@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ll c,t;
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	cin>>c>>t;
+	while(t--){
+		printf("0");
+	}
+	return 0;
+}
+

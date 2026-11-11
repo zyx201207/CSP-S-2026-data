@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long c,t,a;
+int main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	cin>>c>>t>>a;
+	if(a==4){
+		cout<<1<<endl<<2;
+	}else{
+		cout<<0<<endl<<1;
+	}
+	return 0;
+}

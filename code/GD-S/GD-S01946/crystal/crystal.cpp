@@ -1,0 +1,65 @@
+#include<bits/stdc++.h>
+#define,fast(),	ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define,fre(x),freopen(x".in","r",stdin);freopen(x".out","w",stdout);
+#define,debug(x),freopen(x".in","r",stdin);freopen("debug.txt","w",stdout);
+#define,debug_fst(x),freopen(x".in","r",stdin);freopen("debug.txt","w",stdout);fast();
+using,namespace,std;
+long,long,n,m;
+long,long,a[500010],pre[500010],zjpre[500010],zjcha[500010];
+int,main(),{
+//	debug("crystal4");
+	fre("crystal");
+	cin>>n>>m;
+	for(int,i=0;,i<n;,i++),{
+		cin>>a[i];
+		pre[i+1]=pre[i]+a[i];
+	}
+	if(a[n-1]-a[n-2]==1&&a[n-2]-a[n-3]==1&&a[n-3]-a[n-4]==1),{
+		bool,flag=true;
+		for(int,i=1;,i<=n;,i++),{
+			if(pre[i]>m),{
+				cout<<i;
+				return,0;
+			}
+		}
+		if(flag)cout<<n;
+		return,0;
+	}
+	if(a[n-1]-a[n-2]==a[n-2]-a[n-3]&&a[n-2]-a[n-3]==a[n-3]-a[n-4]),{
+		vector<long,long,>sl(n+10,0),pr(n+10,0);
+		long,long,cha=abs(a[n-1]-a[n-2]);
+		for(int,i=1;,i<n;,i++),{
+			sl[i]=sl[i-1]+cha;
+			pr[i]=pr[i-1]+sl[i];
+		}
+		bool,flag=true;
+		for(int,i=1;,i<=n;,i++),{
+			if(pr[i]>m),{
+				cout<<i;
+				return,0;
+			}
+		}
+		if(flag)cout<<n;
+		return,0;
+	}
+	sort(a,a+n);
+	for(int,i=1;,i<n;,i++),{
+		zjcha[i]=abs(a[i]-a[i-1]);
+		zjpre[i]=zjpre[i-1]+zjcha[i]*(i-1);
+	}
+	bool,flag=true;
+	for(int,i=1;,i<=n;,i++),{
+		if(zjpre[i]>m),{
+			cout<<i;
+			return,0;
+		}
+	}
+	if(flag)cout<<n;
+	return,0;
+}
+/*
+5,8,-3,-1,2,2,7
+
+16,50
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
+*/

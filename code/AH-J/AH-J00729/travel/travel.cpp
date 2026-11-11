@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    freopen("travel.in","r"stdin);
+    freopen("travel.out","w"stdout);
+    long long  a,b;
+    char s[3],x[3];
+    cin>>a>>s>>b>>x;
+    if(a==b){
+        cout<<1;
+    }else{
+        cout<<0000;
+        return 0;
+    }
+    if(s[0]==x[0]&&s[1]==x[1]){
+        cout<<1;
+    }else{
+        cout<<000;
+        return 0;
+    }
+    if(s[2]=='A'||s[2]=='B'||s[2]=='C'&&x[2]=='A'||x[2]=='B'||x[2]=='C'){
+        cout<<1;
+    }else if(s[2]=='D'||s[2]=='F'&&x[2]=='D'||x[2]=='F'){
+        cout<<1;
+    }else{
+        cout<<00;
+        return 0;
+    }
+    if(s[2]=='A'&&x[2]=='B'){
+        cout<<1;
+    }else if(s[2]=='B'&&x[2]=='C'){
+        cout<<1;
+    }else if(s[2]=='D'&&x[2]=='F'){
+        cout<<1;
+    }else{
+        cout<<0;
+        return 0;
+    }
+    return 0;
+}

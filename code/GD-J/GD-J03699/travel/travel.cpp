@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+string a,b,c,d,e,f;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cin>>a>>b>>c>>d;
+	for(int i=0;i<b.size()-1;i++) e+=b[i];
+	for(int i=0;i<d.size()-1;i++) f+=d[i];
+	if(a==c){
+		cout<<'1';
+		if(e==f){
+			cout<<'1';			
+			if(((b[2]=='A'||b[2]=='B'||b[2]=='C')&&(d[2]=='A'||d[2]=='B'||d[2]=='C'))||((b[2]=='D'||b[2]=='E')&&(d[2]=='D'||d[2]=='E'))){
+				cout<<'1';
+				if(abs(int(b[2]-d[2]))==1&&!(b[2]=='C'&&d[2]=='D')&&!(b[2]=='D'&&d[2]=='C')) cout<<'1';
+				else cout<<'0';
+			}
+			else cout<<"00";
+		}
+		else cout<<"000";
+	}
+	else cout<<"0000";
+	return 0;
+} 

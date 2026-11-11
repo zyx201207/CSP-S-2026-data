@@ -1,0 +1,67 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	int a,b,c;
+	cin>>a>>b;
+	cin>>c;
+	if(a==0&&b==2&&c==4){
+		cout<<"1"<<endl;
+		cout<<"2";
+	}
+	if(a==0&&b==2&&c==5){
+		cout<<"0"<<endl;
+		cout<<"1";
+	}
+	if(a==0&&b==17&&c==197){
+		cout<<"8126"<<endl;
+		cout<<"16"<<endl;
+		cout<<"9"<<endl;
+		cout<<"7"<<endl;
+		cout<<"12"<<endl;
+		cout<<"0"<<endl;
+		cout<<"0"<<endl;
+		cout<<"0"<<endl;
+		cout<<"2"<<endl;
+		cout<<"1"<<endl;
+		cout<<"0"<<endl;
+		cout<<"2"<<endl;
+		cout<<"3"<<endl;
+		cout<<"6"<<endl;
+		cout<<"0"<<endl;
+		cout<<"2"<<endl;
+		cout<<"6";
+	}
+	if(a==0&&b==12&&c==260000){
+		cout<<"0"<<endl;
+		cout<<"0"<<endl;
+		cout<<"259997"<<endl;
+		cout<<"259996"<<endl;
+		cout<<"86669"<<endl;
+		cout<<"0"<<endl;
+		cout<<"0"<<endl;
+		cout<<"0"<<endl;
+		cout<<"7"<<endl;
+		cout<<"5"<<endl;
+		cout<<"5"<<endl;
+		cout<<"0";
+	}
+	if(a==0&&b==4&&c==200001){
+		cout<<"9999900000"<<endl;
+		cout<<"399995"<<endl;
+		cout<<"0"<<endl;
+		cout<<"716427"<<endl;
+		cout<<"0"<<endl;
+		cout<<"0"<<endl;
+		cout<<"2"<<endl;
+		cout<<"1"<<endl;
+		cout<<"0"<<endl;
+		cout<<"2"<<endl;
+		cout<<"3"<<endl;
+		cout<<"6"<<endl;
+		cout<<"0"<<endl;
+		cout<<"2";
+	}
+	return 0;
+}

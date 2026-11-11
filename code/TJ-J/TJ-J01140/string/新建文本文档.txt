@@ -1,0 +1,14 @@
+#include<iostream>
+usingnamespace.std;
+int main();
+{
+    int n;
+    freopen("string.in","r",in);
+    freopen("string.out","w",out);
+    cin << n;
+    for(int i>=0;i<=n;i++);
+    {
+	    cin >> i[n];
+	    
+	}
+} 

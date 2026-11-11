@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+using namespace std;
+string c1,s1,c2,s2;
+bool r;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cin>>c1>>s1>>c2>>s2;
+	if(c1==c2)
+	{
+		cout<<'1';
+		r='1'; 
+		break;
+		else
+			r[i]='0,0,0,0'; 
+			cout<<r[i];
+		for(i=1;i<=18;i++)
+		{
+			if(r[i]==i)
+			{
+				r=r+'1';
+				cout<<r;
+				break;
+			}
+			else
+				r=r+'0';
+				cout<<r;
+		}
+		for(int i=1;i<=5;i++)
+		{
+		 	if(s1[0]==s2[0]&&s1[1]==s2[1])
+		 	{
+		 		r=r+'1';
+				cout<<r;
+				break;
+		 	}	
+		 	else  
+		 		r=r+'0';
+				cout<<r;
+		}
+		for(char i=0;i<=5;i++)
+		{
+			if(s1[2]=="D"||"F"&&s2[2]=="D"||"F"&&s1[2]!=s2[2])
+			{
+				r=r+'1';
+				cout<<r;
+			if(s1[2]-s2[2]>1||s2[2]-s1[2]>1)
+			{
+				r=r+'0';
+				cout<<r;
+			}
+			else
+				r=r+'1';
+				cout<<r;
+		}		
+	}
+	return 0;
+}

@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int c_1,c_2;
+bool l,c,n;
+char s_1[4],s_2[4];
+int main(){//remember to write IOFILE!
+    freopen("travel.in","r",stdin);
+    freopen("travel.out","w",stdout);
+    cin>>c_1>>s_1>>c_2>>s_2;
+    if(s_1[2]=='D')
+        s_1[2]='E';
+    if(s_2[2]=='D')
+        s_2[2]='E';
+    if(c_1==c_2)
+    {
+        cout<<"1";
+        if((s_1[0]==s_2[0])&&(s_1[1]==s_2[1]))
+        {
+            cout<<"1";
+            if((s_2[2]-'D')*(s_1[2]-'D')>0)
+            {
+                cout<<"1";
+                if((s_2[2]-s_1[2]==1)||(s_2[2]-s_1[2]==-1))
+                    cout<<"1";
+                else
+                    cout<<"0";
+            }
+            else
+                cout<<"00";
+        }
+        else
+            cout<<"000";
+
+
+    }
+    else
+        cout<<"0000";
+    return 0;
+}

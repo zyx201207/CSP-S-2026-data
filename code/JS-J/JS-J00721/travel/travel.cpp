@@ -1,0 +1,156 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    freopen("travel.in","r",stdin);
+    freopen("travel.out","w",stdout);
+    char a[7];
+    int num1=0,num2=0,num3=0,num4=0,b1,b2,c1,c2;
+    for (int i=1;i<=5;i++)
+    {
+        cin>>a[i];
+        if(i==1)
+        {
+            if (a[i]-'0'==1)
+                num1+=10;
+            else
+                continue;
+        }
+        if(i==2)
+        {
+            num1+=a[i]-'0';
+            continue;
+        }
+        if(i==3)
+        {
+            if (a[i]-'0'==1)
+                num2+=10;
+            else
+                continue;
+        }
+        if(i==4)
+        {
+            num2+=a[i]-'0';
+            continue;
+        }
+        if(i==5)
+        {
+            if(a[i]-'0'==17)
+            {
+
+                b1=1;
+                c1=1;
+            }
+            if(a[i]-'0'==18)
+            {
+                b1=1;
+                c1=2;
+            }
+            if(a[i]-'0'==19)
+            {
+                b1=1;
+                c1=3;
+            }
+            if(a[i]-'0'==20)
+            {
+                b1=2;
+                c1=4;
+            }
+            if(a[i]-'0'==22)
+            {
+                b1=2;
+                c1=5;
+            }
+        }
+    }
+    for (int i=1;i<=5;i++)
+    {
+        cin>>a[i];
+        if(i==1)
+        {
+            if (a[i]-'0'==1)
+                num3+=10;
+            else
+                continue;
+        }
+        if(i==2)
+        {
+            num3+=a[i]-'0';
+            continue;
+        }
+        if(i==3)
+        {
+            if (a[i]-'0'==1)
+                num4+=10;
+            else
+                continue;
+        }
+        if(i==4)
+        {
+            num4+=a[i]-'0';
+            continue;
+        }
+        if(i==5)
+        {
+            if(a[i]-'0'==17)
+            {
+                b2=1;
+                c2=1;
+            }
+            if(a[i]-'0'==18)
+            {
+                b2=1;
+                c2=2;
+            }
+            if(a[i]-'0'==19)
+            {
+                b2=1;
+                c2=3;
+            }
+            if(a[i]-'0'==20)
+            {
+                b2=2;
+                c2=4;
+            }
+            if(a[i]-'0'==22)
+            {
+                b2=2;
+                c2=5;
+            }
+        }
+    }
+    if(num1==num3)
+    {
+        cout<<1;
+        if(num2==num4)
+        {
+            cout<<1;
+            if(b1==b2)
+            {
+                cout<<1;
+                if(c1-c2==1||c1-c2==-1)
+                    cout<<1;
+                else{
+                    cout<<0;
+                }
+
+            }
+            else
+                {
+                    cout<<'0'<<'0';
+                }
+        }
+        else
+        {
+            cout<<'0'<<'0'<<'0';
+        }
+
+    }
+    else
+    {
+        cout<<'0'<<'0'<<'0'<<'0';
+    }
+    return 0;
+}

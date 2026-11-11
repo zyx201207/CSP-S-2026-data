@@ -1,0 +1,61 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("travel","r",stdin);
+	freopen("travel","w",stdout);
+	string a,b,c,d;
+	cin>>a>>b>>c>>d;
+	if(a==c){
+		cout<<1;
+		if(b[0]+b[1]==d[0]+d[1]){
+			cout<<1;
+			if((b[2]<68&&d[2]<68)||(b[2]>67&&d[2]>67)){
+			cout<<1;
+			if(b[2]=='A'){
+				if(d[2]=='B'){
+					cout<<1;
+				}else{
+					cout<<0;
+				}
+			}
+			if(b[2]=='B'){
+				if(d[2]=='A'||d[2]=='C'){
+					cout<<1;
+				}else{
+					cout<<0;
+				}
+			}
+			if(b[2]=='C'){
+				if(d[2]=='B'){
+					cout<<1;
+				}else{
+					cout<<0;
+				}
+			}
+			if(b[2]=='D'){
+				if(d[2]=='F'){
+					cout<<1;
+				}else{
+					cout<<0;
+				}
+			}	
+			if(b[2]=='F'){
+				if(d[2]=='D'){
+					cout<<1;
+				}else{
+					cout<<0;
+				}
+			}		
+			}else{
+				cout<<"00";
+			}
+		}else{
+			cout<<"000";
+		}
+	}else{
+		cout<<"0000";
+	}	
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
+}

@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool a[10];
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	int c1,c2;
+	string s1,s2;
+	cin>> c1 >> s1 >> c2 >> s2;
+	int n1=s1[2]-'0',n2=s2[2]-'0';
+	if(c1==c2) a[1]=1;
+	if(s1[0]==s2[0]&&s1[1]==s2[1]){
+		a[2]=1;
+		if(a[1]==0) a[2]=0;
+	}
+	if(n1<=19&&n2<=19||n1>19&&n2>19){
+		if(n1==19&&n2==20||n1==20&&n2==19) a[3]=0;
+		a[3]=1;
+		if(a[2]==0) a[3]=0;
+	}
+	if(abs(n1-n2)==1){
+		a[4]=1;
+		if(a[3]==0) a[4]=0;
+	}
+	if(s1[2]=='D'&&s2[2]=='F'||s1[2]=='F'&&s2[2]=='D') a[4]=1;
+	for(int i=1;i<=4;i++) cout<<a[i];
+	return 0;
+}

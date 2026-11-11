@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+signed main(){
+	ios::sync_with_stdio(false);
+	cin.tie(0);cout.tie(0);
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	
+	return 0;
+}
+//无可奈何花落去，似曾相识燕归来

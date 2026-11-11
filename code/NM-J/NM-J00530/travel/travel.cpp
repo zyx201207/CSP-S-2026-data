@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+string c1,s1,c2,s2,s="",v1="",v2="";
+int main()
+{
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cin>>c1>>s1>>c2>>s2;
+    if(c1==c2) s=s+'1';
+    		else {cout<<"0000";return 0;}
+    v1=v1+s1[0]+s1[1];
+    v2=v2+s2[0]+s2[1];
+    if(v1==v2) s=s+'1';
+    		else {cout<<s<<"000";return 0;}
+    if(((s1[2]<='C'&&s1[2]>='A')&&(s2[2]<='C'&&s2[2]>='A'))||((s1[2]<='F'&&s1[2]>='D')&&(s2[2]<='F'&&s2[2]>='D'))) s=s+'1';
+    		else {cout<<s<<"00";return 0;}
+    if(((s1[2]=='A')&&(s2[2]=='B'))||((s1[2]=='B')&&(s2[2]=='C'))||((s1[2]=='D')&&(s2[2]=='F'))||((s1[2]=='B')&&(s2[2]=='A'))||((s1[2]=='C')&&(s2[2]=='B'))||((s1[2]=='F')&&(s2[2]=='D'))) s=s+'1';
+    				else {cout<<s<<"0";return 0;}
+    cout<<s;
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
+}

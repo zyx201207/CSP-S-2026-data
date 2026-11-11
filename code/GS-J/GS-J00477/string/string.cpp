@@ -1,0 +1,130 @@
+#include<bits/stdc++.h>
+using namespace std;
+char s[20000010];
+long long a[20000010];
+int main(){
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	long long n,len=0,cnt=0,now,x=1,z=0;
+	char c;
+	cin >>n;
+	for(long long i=1;i<=n;i++){
+		cin >>a[i]>>s[i];
+		len+=a[i];
+	}
+	if(n%2==0){
+		now=n/2;
+	}else{
+		now=(n-1)/2;
+	}
+	for(long long i=1;i<=now;i++){
+		if(a[i]==a[n-i]&&s[i]!=s[n-i]){
+			cnt+=a[i];
+			continue;
+		}
+		if(a[i]!=a[n-i]&&s[i]==s[n-i]){
+			if(a[i]>a[n-i]){
+				z=a[i]-a[n-i];
+				while(z){
+					if(a[n-x-i]<z){
+						z-=a[n-x-i];
+						cnt+=a[n-x-i];
+						x++;
+					}
+					if(a[n-x-i]=z){
+						z-=a[n-x-i];
+						cnt+=a[n-x-i];
+						break;
+					}
+					if(a[n-x-i]==0){
+						x++;
+					}
+					a[n-x-i]--;
+					z--;
+					cnt++;
+				}
+				x=1;
+				z=0;
+				continue;
+			}
+			if(a[i]<a[n-i]){
+				z=a[n-i]-a[n];
+				while(z){
+					if(a[n+x]<z){
+						z-=a[n+x];
+						cnt+=a[n+x];
+						x++;
+					}
+					if(a[n+x]=z){
+						z-=a[n+x];
+						cnt+=a[n+x];
+						break;
+					}
+					if(a[n+x]==0){
+						x++;
+					}
+					a[n+x]--;
+					z--;
+					cnt++;
+				}
+				x=1;
+				z=0;
+				continue;
+			}
+		}
+		if(a[i]!=a[n-i]&&s[i]!=s[n-i]){
+			if(a[i]>a[n-i]){
+				z=a[i]-a[n-i];
+				cnt+=a[n-i];
+				while(z){
+					if(a[n-x-i]<z){
+						z-=a[n-x-i];
+						cnt+=a[n-x-i];
+						x++;
+					}
+					if(a[n-x-i]=z){
+						z-=a[n-x-i];
+						cnt+=a[n-x-i];
+						break;
+					}
+					if(a[n-x-i]==0){
+						x++;
+					}
+					a[n-x-i]--;
+					z--;
+					cnt++;
+				}
+				x=1;
+				z=0;
+				continue;
+			}
+			if(a[i]<a[n-i]){
+				z=a[n-i]-a[n];
+				cnt+=a[n];
+				while(z){
+					if(a[n+x]<z){
+						z-=a[n+x];
+						cnt+=a[n+x];
+						x++;
+					}
+					if(a[n+x]=z){
+						z-=a[n+x];
+						cnt+=a[n+x];
+						break;
+					}
+					if(a[n+x]==0){
+						x++;
+					}
+					a[n+x]--;
+					z--;
+					cnt++;
+				}
+				x=1;
+				z=0;
+				continue;
+			}
+		}
+	}
+	cout <<cnt;
+	return 0;
+}

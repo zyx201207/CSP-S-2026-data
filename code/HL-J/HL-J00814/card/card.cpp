@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("card.in","r",stdin);
+	freopen("card.out","w",stdout);
+	long long n,m,card[1000];
+	cin>>n>>m;
+	for(int i=0;i<n;i++){
+		cin>>card[i];
+	}
+	return 0;
+}

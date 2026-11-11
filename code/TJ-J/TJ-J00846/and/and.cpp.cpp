@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	int n,m;
+	cin>>n>>m;
+	for(int i;i<=0;i++){
+		if(i>=m){
+			cout<<i<<m;
+		}
+		else{
+			cout<<n;
+		}
+	}
+	return 0;
+}

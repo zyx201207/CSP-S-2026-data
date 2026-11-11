@@ -1,0 +1,125 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    freopen("travel.in","r",stdin);
+    freopen("travel.out","w",stdout);
+    int x1=0;
+    string a,b,c,d;
+    cin>>a>>b>>c>>d;
+    for(int i=1;i<=2;i++)
+    {
+        if(a[i]==c[i])
+        {
+            x1++;
+        }
+    }
+    if(x1==2)
+    {
+        cout<<"1";
+    }
+    else
+    {
+        cout<<"0000";
+        //return 0;
+    }
+    x1=0;
+    //
+    for(int i=0;i<=2;i++)
+    {
+        if(b[i]==d[i])
+        {
+            x1+=1;
+        }
+    }
+    if(x1==2)
+    {
+        cout<<"1";
+        int x=2;
+        if(b[x]=='A')//
+        {
+            if(d[x]=='B'||d[x]=='C')
+            {
+                cout<<"1";
+                if(d[x]=='B')
+                {
+                    cout<<"1";
+                }
+                else
+                {
+                    cout<<"0";
+                }
+            }
+            else
+            {
+                cout<<"0";
+            }
+        }
+        if(b[x]=='B')//
+        {
+            if(d[x]=='A'||d[x]=='C')
+            {
+                cout<<"1";
+                if(d[x]=='A'||d[x]=='C')
+                {
+                    cout<<"1";
+                }
+                else
+                {
+                    cout<<"0";
+                }
+            }
+            else
+            {
+                cout<<"0";
+            }
+        }
+        if(b[x]=='C')//
+        {
+            if(d[x]=='B'||d[x]=='A')
+            {
+                cout<<"1";
+                if(d[x]=='B')
+                {
+                    cout<<"1";
+                }
+                else
+                {
+                    cout<<"0";
+                }
+            }
+            else
+            {
+                cout<<"0";
+            }
+        }
+        if(b[x]=='D')//
+        {
+            if(d[x]=='F')
+            {
+                cout<<"11";
+            }
+            else
+            {
+                cout<<"00";
+            }
+        }
+        if(b[x]=='F')//
+        {
+            if(d[x]=='D')
+            {
+                cout<<"11";
+            }
+            else
+            {
+                cout<<"00";
+            }
+        }
+    }
+    else
+    {
+        cout<<"0";
+    }
+    //
+    return 0;
+}

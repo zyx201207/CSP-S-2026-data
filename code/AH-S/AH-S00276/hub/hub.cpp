@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+void solve();
+int main(){
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	solve();
+	return 0;
+}
+#define int long long
+const int N=1e5+10;
+
+void solve(){
+	int c,t;
+	cin>>c>>t;
+	while(t--){
+		cout<<"0\n";
+	}
+	return;
+}

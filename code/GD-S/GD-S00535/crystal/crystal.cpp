@@ -1,0 +1,14 @@
+#include<bits/stdc++.h> 
+using namespace std;
+int main(){
+	freopen("crystal.in","r",stdin);
+	freopen("crystal.out","w",stdin);
+	int n,m;
+	cin>>n>>m;
+	cout<<3;
+	
+	
+		
+	return 0;
+}
+

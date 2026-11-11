@@ -1,0 +1,14 @@
+#include<iostream>
+#define int long long
+using namespace std;
+int n;
+
+signed main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+//	freopen("hub.in","r",stdin);
+//	freopen("hub.out","w",stdout);
+	
+	return 0;
+}

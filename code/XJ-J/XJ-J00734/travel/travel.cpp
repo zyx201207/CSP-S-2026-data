@@ -1,0 +1,10 @@
+#include<bits/stdc++.h>
+#include<string>
+using namespace std;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cout<<1111;
+	return 0;
+}    
+

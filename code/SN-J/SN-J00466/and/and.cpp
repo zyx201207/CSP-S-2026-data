@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n,m,a[200005];
+int main()
+{
+	freopen("and.in","r",stdin);
+	freoprn("and.out","w",stdout);
+	cin>>n>>m;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>a[i];
+	}
+	cout<<2;
+	return 0; 
+}

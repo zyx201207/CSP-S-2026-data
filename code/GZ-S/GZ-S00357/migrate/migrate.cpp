@@ -1,0 +1,16 @@
+//GZ-S00357 贵阳实验二中 刘子墨
+#include<bits/stdc++.h>
+using namespace std;
+int c,t,n,d;
+long long x[2000005];
+int main(){
+	ios::sync_with_stdio(0),cin.tie(0),cout.tie(0); 
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	cin>>c>>t;
+	while(t--){
+		cin>>n>>d;
+		for(int i=1;i<=n;i++) cin>>x[i];
+	}
+	return 0;
+} 

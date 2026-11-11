@@ -1,0 +1,82 @@
+#include<bits/stdc++.h>
+#include<cstring>
+#include<cmath>
+#include<iostream>
+
+int main(){
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//freopen("hub.in","r",stdin);
+	//freopen("hub.out","w",stdout);
+	//just a OIer
+	and bool break char class continue do double else float false for int if long namespace new or public return short signed struct true unsigned using void while xor 
+}

@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ll n,m;
+ll a[500005];
+int main(){
+	freopen("crystal.in","r",stdin);
+	freopen("crystal.out","w",stdout);
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cin>>n>>m;
+	for(ll i=1;i<=n;i++)cin>>a[i];
+	sort(a+1,a+n+1);
+	ll l=1,r,ans=1;
+	for(r=1;r<=n;r++){
+		m-=(r-l)*(a[r]-a[r-1]);
+		while(m<0){
+			m+=(a[r]-a[l]);
+			l++;
+		}
+		ans=max(ans,(r-l+1));
+	}
+	cout<<ans<<endl;
+	return 0;
+}
+

@@ -1,0 +1,157 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct
+{
+	long long a;
+	char s;
+}b[100005];
+int main()
+{
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	int n;
+	cin>>n;
+	long long ans=0;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>b[i].a>>b[i].s;
+	}
+	long long f=1,r=n,cntf=0,cntr=0;
+	for(;f<r;)
+	{
+		if(b[f].s!=b[r].s)
+		{
+			if(b[f].a>b[r].a)
+			{
+				ans+=b[r].a;
+				cntf=b[f].a-b[r].a;
+				r--;
+			}
+			else
+			{
+				cntr=b[r].a-b[f].a;
+				ans+=b[f].a;
+				f++;
+				if(cntr==0)r--;
+			}
+		}
+		else
+		{
+			if(cntr==0 && cntf==0)
+			{
+				if(b[f].a>b[r].a)
+				{
+					cntf=b[f].a-b[r].a;
+					r--;
+				}
+				else
+				{
+					cntr=b[r].a-b[f].a;
+					f++;
+					if(cntr==0)r--;
+				}
+			}
+			if(cntr!=0)
+			{
+				if(cntr>b[f].a)
+				{
+					cntr-=b[f].a;
+					f++;
+				}
+				else
+				{
+					cntf=b[f].a-cntr;
+					r--;
+					cntr=0;
+					if(cntf==0)f++;
+				}
+			}
+			if(cntf!=0 && b[r].s==b[f].s)
+			{
+				if(cntf>b[r].a)
+				{
+					cntf-=b[r].a;
+					r--;
+				}
+				else
+				{
+					cntr=b[r].a-cntf;
+					f++;
+					cntf=0;
+					if(cntr==0)r--;
+				}
+			}
+		}
+		if(cntf>=1)
+		{
+			if(b[r].s!=b[f].s)
+			{
+				if(b[r].a>cntf)
+				{
+					ans+=cntf;
+					cntf=0;
+					f++;
+					cntr=b[r].a-cntf;
+				}
+				else
+				{
+					ans+=b[r].a;
+					cntf=cntf-b[r].a;
+					r--;
+					if(cntf==0)f++;
+				}
+			}
+			else
+			{
+				if(b[r].a>cntf)
+				{
+					cntf=0;
+					f++;
+					cntr=b[r].a-cntf;
+				}
+				else
+				{
+					cntf=cntf-b[r].a;
+					r--;
+					if(cntf==0)f++;
+				}
+			}
+		}
+		if(cntr>=1)
+		{
+			if(b[r].s!=b[f].s)
+			{
+				if(b[f].a>cntr)
+				{
+					ans+=cntr;
+					cntr=0;
+					r--;
+				}
+				else
+				{
+					ans+=b[f].a;
+					cntr=cntr-b[f].a;
+					f++;
+					if(cntr==0)r--;
+				}
+			}
+			else
+			{
+				if(b[f].a>cntr)
+				{
+					cntr=0;
+					r--;
+					cntf=b[f].a-cntr;
+				}
+				else
+				{
+					cntr=cntf-b[f].a;
+					f++;
+					if(cntr==0)r--;
+				}
+			}
+		}
+	}
+	cout<<ans;
+	return 0;
+}

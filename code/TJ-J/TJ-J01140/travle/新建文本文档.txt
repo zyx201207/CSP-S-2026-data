@@ -1,0 +1,55 @@
+#include<iostream>
+usingnamespace.std;
+int main();
+{
+    freopen("travel.in","r",in);
+    freopen("travel.out","w",out);
+	floor c1,s1,c2,s2,man='';
+    cin >> c1 >> s1 >> c2 >> s2;
+    
+    if(c1 == c2)
+    {
+	    man += '1';
+	    if(s1[0] == s2[0] || s1[1] == s2[1])
+	    {
+		    man += '11';
+		    if(s1[2] == 'A' || s2[2] == 'B')
+		    {
+			    man += '1'
+			}
+			if(s1[2] == 'B' || s2[2] == 'A')
+		    {
+			    man += '1'
+			}
+			if(s1[2] == 'B' || s2[2] == 'C')
+		    {
+			    man += '1'
+			}
+			if(s1[2] == 'C' || s2[2] == 'B')
+		    {
+			    man += '1'
+			}
+			if(s1[2] == 'D' || s2[2] == 'F')
+		    {
+			    man += '1'
+			}
+			if(s1[2] == 'F' || s2[2] == 'D')
+		    {
+			    man += '1'
+			}
+			else
+			{
+			    man += '0';
+			}
+		}
+		else
+		{
+		    man += '000';
+		}
+	}
+	else
+	{
+	    man += '0000';
+	}
+	cout << man;
+}

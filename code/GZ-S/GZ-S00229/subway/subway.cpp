@@ -1,0 +1,10 @@
+//GZ-S00229 ³ÂÑåÑ®
+#include<bits/stdc++.h>
+using namespace std;
+int c,n,m,d,q;
+int main(){
+	freopen("subway.in","r",stdin);
+	freopen("subway.out","w",stdout);
+	
+	return 0;
+}

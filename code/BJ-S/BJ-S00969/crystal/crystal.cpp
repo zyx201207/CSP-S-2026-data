@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long a[500005], s[500005], n, m, ans;
+int main(){
+    freopen("crystal.in", "r", stdin);
+    freopen("crystal.out", "w", stdout);
+    cin >> n >> m;
+    for(int i = 1; i <= n; i++){
+        cin >> a[i];
+    }
+    sort(a + 1, a + n + 1);
+    for(int i = 1; i <= n; i++){
+        s[i] = s[i - 1] + a[i];
+        if(a[i] * i - s[i] <= m) ans = i;
+        else break;
+    }
+    cout << ans;
+    return 0;
+}

@@ -1,0 +1,157 @@
+#include<bits/stdc++.h>
+using namespace std;
+int p(char x){
+	int u;
+	if(x=='0'){
+		u=0;
+	}
+	if(x=='1'){
+		u=1;
+	}
+	if(x=='2'){
+		u=2;
+	}
+	if(x=='3'){
+		u=3;
+	}
+	if(x=='4'){
+		u=4;
+	}
+	if(x=='5'){
+		u=5;
+	}
+	if(x=='6'){
+		u=6;
+	}
+	if(x=='7'){
+		u=7;
+	}
+	if(x=='8'){
+		u=8;
+	}
+	if(x=='9'){
+		u=9;
+	}
+	return u;
+}
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	int a;
+	char aaa,bbb,ccc;
+	cin>>a;
+	cin>>aaa>>bbb>>ccc;
+	int b;
+	cin>>b;
+	char aaaa,bbbb,cccc;
+	cin>>aaaa>>bbbb>>cccc;
+	int aaab,bbbc,aaaab,bbbbc,cccd,ccccd;
+	if(a==b){
+		cout<<1;
+		if(aaa=='0'){
+			aaab=0;
+		}
+		if(aaa=='1')
+		{
+		aaab=1;
+		}
+		if(aaa=='2')
+		{
+		aaab=2;
+		}
+		if(aaa=='3')
+		{
+		aaab=3;
+		}
+		if(aaa=='4')
+		{
+		aaab=4;
+		}
+		if(aaa=='5')
+		{
+		aaab=5;
+		}
+		if(aaa=='6')
+		{
+		aaab=6;
+		}
+		if(aaa=='7')
+		{
+		aaab=7;
+		}
+		if(aaa=='8')
+		{
+		aaab=8;
+		}
+		if(aaa=='9')
+		{
+		aaab=9;
+		}
+		bbbc=p(bbb);
+		bbbc=10*aaab+bbbc;
+		aaaab=p(aaaa);
+		bbbbc=p(bbbb);
+		bbbbc=10*aaaab+bbbbc;
+		if(bbbc==bbbbc){
+			cout<<1;
+			if(ccc=='A'){
+				cccd=1;
+			}
+			if(ccc=='B'){
+				cccd=2;
+			}
+			if(ccc=='C'){
+				cccd=3;
+			}
+			if(ccc=='D'){
+				cccd=4;
+			}
+			if(ccc=='E'){
+				cccd=5;
+		}
+			if(cccc=='F'){
+				ccccd=6;
+			}
+			if(cccc=='A'){
+				ccccd=1;
+			}
+			if(cccc=='B'){
+				ccccd=2;
+			}
+			if(cccc=='C'){
+				ccccd=3;
+			}
+			if(cccc=='D'){
+				ccccd=4;
+			}
+			if(cccc=='E'){
+				ccccd=5;
+		}
+			if(cccc=='F'){
+				ccccd=6;
+			}
+			if(cccd<=3&&ccccd<=3||cccd>3&&ccccd>3){
+				cout<<1;
+				if(abs(cccd-ccccd)==1){
+					cout<<1;
+				}
+				else{
+					cout<<0;
+				}
+			}
+			else{
+				cout<<"00";
+				return 0;
+			}
+	}
+		else{
+			cout<<"000";
+			return 0;
+		}
+}
+	else{
+		cout<<"0000";
+		return 0;
+	}
+	return 0;
+}

@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n,m,c,d,q;
+int a[100010];
+int main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	for(int i=1;i<=32;i++){
+		cin>>a[i];
+	}
+	cout<<1<<endl<<2;
+	return 0;
+} 

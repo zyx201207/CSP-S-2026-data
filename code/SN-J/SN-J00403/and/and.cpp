@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int a,b,c,d,z,y,x,n;
+	cin>>a>>b>>c>>d;
+	z=b%10;
+	y=d%10;
+	x=b/10;
+	n=d/10;
+	if(a=c)
+	{
+		a=n;
+		if(x=n)
+		{
+			cout<<"1";
+		}
+		else
+		{
+			cout<<"0";
+		}
+	}
+	else
+	{
+		cout<<"0";
+	}
+	if(z!=y)
+	{
+		cout<<"1";
+	}
+	else
+	{
+		cout<<"0";
+	}
+	if(a=d)
+	{
+		cout<<"1";
+	}
+	else
+	{
+		cout<<"0";
+	}
+	if(z=y)
+	{
+		cout<<"1";
+	}
+	else
+	{
+		cout<<"0";
+	}
+}

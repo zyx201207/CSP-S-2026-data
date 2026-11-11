@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool tmp(int c,int d){
+	return c>d;
+}
+int a,b,n[200005];
+int main()
+{
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	cin>>a>>b;
+	for(int i=1;i<=a;i++) cin>>n[i];
+	sort(n+1,n+a+1,tmp);
+	cout<<n[b];
+}

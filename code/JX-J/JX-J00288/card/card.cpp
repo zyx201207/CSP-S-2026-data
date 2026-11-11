@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+freopen("card.in","r",stdin)
+freopen("card.out","w",stdout)
+int main()
+{
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}

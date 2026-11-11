@@ -1,0 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	cout<<4<<endl<<0<<endl<<2<<endl<<5;
+}

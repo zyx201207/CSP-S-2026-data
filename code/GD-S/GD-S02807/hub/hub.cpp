@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	int c,T; cin>>c>>T;
+	while(T--){
+		int n,k; cin>>n>>k;
+		for(int i=1;i<n;i++){
+			int u,v; cin>>u>>v;
+		}
+		int mid=n/2;
+		if(k>=mid) cout<<1<<endl;
+		else cout<<mid-k+1<<endl;
+	}
+	
+	
+	
+	return 0;
+}

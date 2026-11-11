@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+freopen("travel.in","r",stdin);
+freopen("travel.out","w",stdout);
+string c1,s1,c2,s2,x1,y1,x2,y2;
+cin>>c1>>s1>>c2>>s2;
+s1='x1'+'y1',s2='x2'+'y2';
+if(c1==c2){
+cout<<1;
+}else{
+cout<<0;
+}
+if(x1==x2){
+cout<<1;
+}else{
+cout<<0;
+}
+if(y1='D'&&y2='F'){
+cout<<1;
+}
+if(y1=='F'&&y2=='D'){
+cout<<1;
+}
+if(y1=='A'&&y2=='B'){
+cout<<1;
+}
+if(y1=='B'&&y2=='A'){
+cout<<1;
+}
+if(y1=='B'&&y2=='C'){
+cout<<1;
+}
+if(y1=='C'&&y2=='B'){
+cout<<1;
+}
+if(y1=='A'&&y2=='C'){
+cout<<0;
+}
+if(y1=='C'&&y2=='A'){
+cout<<0;
+}
+if(y1=='A'&&(y2=='D'||y2=='F')){
+cout<<0;
+}
+if(y1=='B'&&(y2=='D'||y2=='F')){
+cout<<0;
+}
+if(y1=='C'&&(y2=='D'||y2=='F')){
+cout<<0;
+}
+return 0;
+}

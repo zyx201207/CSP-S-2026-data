@@ -1,0 +1,93 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	int n,n1,v,v1;
+	char sum,ans;
+	cin>>n>>n1>>sum>>v>>v1>>ans;
+	if(n!=v)
+	{
+		cout<<"0000";
+		return 0;
+	}
+	else
+	cout<<1;
+	if(n1==v1)
+	cout<<1;
+	else
+	{
+		cout<<"000";
+		return 0;
+	}
+	if(sum>='A'&&sum<='C'&&ans>='A'&&ans<='C'&&n1==v1)
+	cout<<1;
+	else
+	{
+		if(sum=='D'||sum=='F'&&ans=='D'||ans=='F'&&n1==v1)
+		cout<<1;
+		else
+		{
+			cout<<"00";
+			return 0;
+		}
+	}
+	if(sum=='A'&&ans=='B')
+	cout<<1;
+	else
+	{
+		if(sum=='B'&&ans=='C')
+		cout<<1;
+		else
+		{
+			if(sum=='C'&&ans=='B')
+			cout<<1;
+			else
+			{
+				if(sum=='D'&&ans=='F')
+				cout<<1;
+				else
+				{
+					if(sum=='F'&&ans=='D')
+					cout<<1;
+					else
+					{
+						if(sum=='B'&&ans=='A')
+						cout<<1;
+						else
+						if(ans=='A'&&sum=='B')
+						cout<<1;
+						else
+						{
+							if(ans=='B'&&sum=='C')
+							cout<<1;
+							else
+							{
+								if(ans=='C'&&sum=='B')
+								cout<<1;
+								else
+								{
+									if(ans=='D'&&sum=='F')
+									cout<<1;
+									else
+									{
+										if(ans=='F'&&sum=='D')
+										cout<<1;
+										else
+										{
+											if(ans=='B'&&sum=='A')
+											cout<<1;
+											else
+											cout<<0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	return 0;
+} 

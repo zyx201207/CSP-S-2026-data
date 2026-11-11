@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+int c,t,i;
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	cin>>c>>t;
+	while(t--)cout<<++i<<"\n";
+}

@@ -1,0 +1,84 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int c, n, m, d, q;
+int w[500005];
+struct subway{
+	int k;
+	vector<int> a, t;
+}mt[505];
+struct ST{
+	int mt, t;
+};
+vector<ST> st[500005];
+long long dist[500005];
+struct node{
+	int x, mt;
+	long long cnt;
+	bool operator<(const node& other) const{
+		return cnt > other.cnt;
+	}
+};
+
+long long dij(int s, int e){
+	for(int i = 1; i <= m; i++) dist[i] = LLONG_MAX;
+	priority_queue<node> pq;
+	pq.push({s, 0, 0});
+	dist[s] = 0;
+	
+	while(pq.size()){
+		node hd = pq.top();
+		pq.pop();
+		
+		if(hd.cnt > dist[hd.x]) continue;
+		if(hd.x == e) continue;
+		
+		for(ST it : st[hd.x]){
+			if(it.mt == hd.mt) continue;
+			
+			long long p = hd.cnt + it.t;
+			for(int i = 0; i < mt[it.mt].k; i++){
+				long long ncnt = p + mt[it.mt].t[i];
+				if(ncnt >= dist[mt[it.mt].a[i]]) continue;
+				pq.push({mt[it.mt].a[i], it.mt, ncnt});
+				dist[mt[it.mt].a[i]] = ncnt;
+				if(mt[it.mt].a[i] == e) break;
+			}
+		}
+	}
+	
+	long long ans = dist[e];
+	ans += w[s] + w[e];
+	
+	return ans;
+}
+
+int main(){
+	freopen("subway.in", "r", stdin);
+	freopen("subway.out", "w", stdout);
+	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+	
+	cin >> c >> n >> m >> d >> q;
+	for(int i = 1; i <= m; i++) cin >> w[i];
+	for(int i = 1; i <= n; i++){
+		cin >> mt[i].k;
+		for(int j = 1; j <= mt[i].k; j++){
+			int a, t;
+			cin >> a >> t;
+			mt[i].a.push_back(a);
+			mt[i].t.push_back(t);
+			st[a].push_back({i, t});
+		}
+	}
+	
+	while(q--){
+		int x, y;
+		cin >> x >> y;
+		cout << dij(x, y) << "\n";
+	}
+	
+	return 0;
+}

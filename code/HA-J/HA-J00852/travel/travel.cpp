@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	string a1,b1,a2,b2;
+	int sum=4;
+	cin >> a1 >> a2 >> b1 >> b2;
+	if(a1 == b1){
+		cout << "1";
+		sum--;
+		if(a2[0]==b2[0] && a2[1]==b2[1]){
+			cout << "1";
+			sum--;
+			if(a2[2] <= 'C' && b2[2] <='C'||a2[2] >= 'D' && b2[2] >='D'){
+				cout << "1";
+				sum--;
+				if(a2[2]-b2[2]==1 || b2[2]-a2[2]==1){
+					cout << "1";
+					sum--;
+				}
+			}
+		}
+	}
+	for(int i=1;i<=sum;i++){
+		cout << "0";
+	}
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
+}

@@ -1,0 +1,1 @@
+f(st,nd,j,cost+t[i][j])

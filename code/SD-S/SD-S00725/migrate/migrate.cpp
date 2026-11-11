@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+int x[2000010];
+signed main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	int c,t;
+	cin>>c>>t;
+	while(t--){
+		int n,d;
+		cin>>n>>d;
+		int cha;
+		for(int i=1;i<=n;i++){
+			cin>>x[i];
+			if(i==2){
+				cha=x[i]-x[i-1];
+			}
+		}
+		if(d>=cha&&d<=cha*2||d%cha==0){
+			cout<<0<<"\n";
+		}
+		else cout<<n/d<<"\n";
+	}
+	return 0;
+}

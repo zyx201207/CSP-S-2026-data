@@ -1,0 +1,205 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long n,m,ans[200001],maxai=-1,maxan=-1;
+long long a[200001];
+//m=1,m=n-1,m=n,maxai<=4,n<=20
+void VeryOK()
+{
+	long long xh[21];
+	if(m==2)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)
+				maxan=max(maxan,xh[1]&xh[2]);
+	if(m==3)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=a[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=a[2]+1;xh[3]<=n;xh[3]++)			
+					maxan=max(maxan,xh[1]&xh[2]&xh[3]);
+	if(m==4)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)				
+						maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]);
+	if(m==5)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]);
+	if(m==6)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]);
+	if(m==7)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)					
+									maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]);				
+	if(m==8)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)					
+										maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]);
+	if(m==9)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)			
+										for(xh[9]=xh[8]+1;xh[9]<=n;xh[9]++)		
+											maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]&xh[9]);								
+	if(m==10)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)			
+										for(xh[9]=xh[8]+1;xh[9]<=n;xh[9]++)	
+											for(xh[10]=xh[9]+1;xh[10]<=n;xh[10]++)		
+												maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]&xh[9]&xh[10]);	
+	if(m==11)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)			
+										for(xh[9]=xh[8]+1;xh[9]<=n;xh[9]++)	
+											for(xh[10]=xh[9]+1;xh[10]<=n;xh[10]++)		
+												for(xh[11]=xh[10]+1;xh[11]<=n;xh[11]++)	
+													maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]&xh[9]&xh[10]&xh[11]);	
+	if(m==12)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)			
+										for(xh[9]=xh[8]+1;xh[9]<=n;xh[9]++)	
+											for(xh[10]=xh[9]+1;xh[10]<=n;xh[10]++)		
+												for(xh[11]=xh[10]+1;xh[11]<=n;xh[11]++)	
+													for(xh[12]=xh[11]+1;xh[12]<=n;xh[12]++)													
+														maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]&xh[9]&xh[10]&xh[11]&xh[12]);	
+	if(m==13)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)			
+										for(xh[9]=xh[8]+1;xh[9]<=n;xh[9]++)	
+											for(xh[10]=xh[9]+1;xh[10]<=n;xh[10]++)		
+												for(xh[11]=xh[10]+1;xh[11]<=n;xh[11]++)	
+													for(xh[12]=xh[11]+1;xh[12]<=n;xh[12]++)	
+														for(xh[13]=xh[12]+1;xh[13]<=n;xh[13]++)													
+															maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]&xh[9]&xh[10]&xh[11]&xh[12]&xh[13]);	
+	if(m==14)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)			
+										for(xh[9]=xh[8]+1;xh[9]<=n;xh[9]++)	
+											for(xh[10]=xh[9]+1;xh[10]<=n;xh[10]++)		
+												for(xh[11]=xh[10]+1;xh[11]<=n;xh[11]++)	
+													for(xh[12]=xh[11]+1;xh[12]<=n;xh[12]++)	
+														for(xh[13]=xh[12]+1;xh[13]<=n;xh[13]++)	
+															for(xh[14]=xh[13]+1;xh[14]<=n;xh[14]++)													
+																maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]&xh[9]&xh[10]&xh[11]&xh[12]&xh[13]&xh[14]);	
+	if(m==15)
+		for(xh[1]=1;xh[1]<=n;xh[1]++)
+			for(xh[2]=xh[1]+1;xh[2]<=n;xh[2]++)	
+				for(xh[3]=xh[2]+1;xh[3]<=n;xh[3]++)
+					for(xh[4]=xh[3]+1;xh[4]<=n;xh[4]++)		
+						for(xh[5]=xh[4]+1;xh[5]<=n;xh[5]++)				
+							for(xh[6]=xh[5]+1;xh[6]<=n;xh[6]++)			
+								for(xh[7]=xh[6]+1;xh[7]<=n;xh[7]++)	
+									for(xh[8]=xh[7]+1;xh[8]<=n;xh[8]++)			
+										for(xh[9]=xh[8]+1;xh[9]<=n;xh[9]++)	
+											for(xh[10]=xh[9]+1;xh[10]<=n;xh[10]++)		
+												for(xh[11]=xh[10]+1;xh[11]<=n;xh[11]++)	
+													for(xh[12]=xh[11]+1;xh[12]<=n;xh[12]++)	
+														for(xh[13]=xh[12]+1;xh[13]<=n;xh[13]++)	
+															for(xh[14]=xh[13]+1;xh[14]<=n;xh[14]++)	
+																for(xh[15]=xh[14]+1;xh[15]<=n;xh[15]++)													
+																	maxan=max(maxan,xh[1]&xh[2]&xh[3]&xh[4]&xh[5]&xh[6]&xh[7]&xh[8]&xh[9]&xh[10]&xh[11]&xh[12]&xh[13]&xh[14]);			
+		cout<<maxan;		 
+}
+void END___()
+{
+	cout<<a[n+1-m];
+}
+int main()
+{
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	cin>>n>>m;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>a[i];
+		maxai=max(maxai,a[i]);
+	}
+	sort(a+1,a+n+1);
+	if(m==1)
+	{
+		cout<<a[n];
+		return 0;
+	}
+	if(m==n)
+	{
+		ans[0]=a[1];
+		for(int i=2;i<=n;i++)
+			ans[0]&=a[i];
+		cout<<ans[0];
+		return 0;
+	}
+	if(m==n-1)
+	{
+		for(int i=2;i<=n;i++)
+			ans[i]=a[1];
+		ans[1]=a[2];
+		for(int i=1;i<=n;i++)
+			for(int j=1;j<=n;j++)
+				if(i!=j)
+					ans[j]&=a[i];
+		for(int i=1;i<=n;i++)
+			maxan=max(maxan,ans[i]);
+		cout<<maxan;
+		return 0;
+	}
+	if(n<=20)
+		VeryOK();
+	else
+		END___();
+	return 0;
+}

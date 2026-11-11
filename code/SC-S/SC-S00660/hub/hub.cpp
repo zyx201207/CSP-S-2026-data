@@ -1,0 +1,10 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	freopen("hub","r",stdin);
+	freopen("hub","w",stdout);
+	int c,t,n,k;
+	cin>>c>>t>>n>>k;
+	cout<<1<<endl<<2;
+	return 0;
+}

@@ -1,0 +1,165 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+const int N=5e5+5;
+int n;
+ll m,a[N],b[N];
+int L=1,f=0;
+ll ans=1;
+int main(){
+	//freopen("crystal1.in","r",stdin);
+	freopen("crystal.in","r",stdin);
+	freopen("crystal.out","w",stdout);
+	scanf("%d%lld",&n,&m);
+	for(int i=1;i<=n;i++){
+		scanf("%lld",&a[i]);
+	}
+	sort(a+1,a+n+1);
+	for(int i=1;i<=n;i++){
+		b[i]=a[i]-a[i-1];
+	}
+	for(int R=2;R<=n;R++){
+		f=f+(R-L)*(a[R]-a[R-1]);
+		while(f>m&&L<R){
+			L++;
+			f-=(a[R]-a[L]);
+		}
+		ans=max(ans,(ll)R-L+1);
+	}
+	cout<<ans;
+	return 0;
+}
+/*
+Âå¹È£º1143716¹Ø×¢Ð»Ð»ß÷
+¹ã½»Óãº½Ô± 
+*/
+
+/*
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+RP++
+*/

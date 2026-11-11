@@ -1,0 +1,101 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long a[200005],n,pos,sum,na[200005],tmp,cnt;
+char c[200005],nc[200005];
+int main()
+{
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	cin.tie(NULL);
+	ios::sync_with_stdio(0);
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>a[i]>>c[i];
+		sum+=a[i];
+	}
+	for(int i=1;i<=n;i++)
+	{
+		if(tmp==-1)
+		{
+			na[i+1]=a[i];
+			nc[i+1]=c[i];
+			continue;
+		}
+		tmp+=a[i];
+		if(tmp>sum/2)
+		{
+			if(sum%2==0)
+			{
+				na[i+1]=tmp-sum/2;
+				na[i]=a[i]-na[i+1];
+				nc[i+1]=c[i];
+			}
+			else
+			{
+				a[i]--;
+				tmp--;
+				sum--;
+				na[i+1]=tmp-sum/2;
+				na[i]=a[i]-na[i+1];
+				nc[i+1]=c[i];
+				nc[i]=c[i];
+			}
+			tmp=-1;
+			pos=i;
+		}
+		else
+		{
+			na[i]=a[i];
+			nc[i]=c[i];
+		}
+	}
+	int i=1,j=n+1;
+	while(1)
+	{
+		if(nc[i]==nc[j])
+		{
+			if(na[i]>na[j])
+			{
+				na[i]-=na[j];
+				if(j>pos)
+				{
+					j--;
+				}
+			}
+			else
+			{
+				na[j]-=na[i];
+				i++;
+				if(i>pos)
+				{
+					break;
+				}
+			}
+		}
+		else
+		{
+			if(na[i]>na[j])
+			{
+				na[i]-=na[j];
+				cnt+=na[j];
+				if(j>pos)
+				{
+					j--;
+				}
+			}
+			else
+			{
+				na[j]-=na[i];
+				cnt+=na[i];
+				i++;
+				if(i>pos)
+				{
+					break;
+				}
+			}
+		}
+	}
+	cout<<cnt;
+	return 0;
+}

@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	int c,t;
+	cin>>c>>t;
+	for(int i=0;i<t;i++){
+		int n;long long d,x[2000002];
+		for(int j=0;j<n;j++){
+			cin>>x[j];
+		} 
+		cout<<"ÎÒ²»»á";
+	}
+	return 0;
+}

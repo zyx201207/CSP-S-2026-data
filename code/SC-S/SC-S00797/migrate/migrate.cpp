@@ -1,0 +1,93 @@
+迁徙（migrate）
+【题目描述】
+海上有 n 座岛屿，自北向南排成一条直线，其中第 i (1 ≤ i ≤ n) 座岛屿在这条直
+线上的坐标为整数 xi，且 x1 < x2 < · · · < xn。每年秋季，一群海鸟会沿着这条直线在
+南北方向上迁徙，小 P 正在观察它们。
+海鸟的体力有限，每次飞行的距离都不超过 d。若两座岛屿 i, j (1 ≤ i, j ≤ n) 满足
+|xi − xj
+| ≤ d，海鸟就可以从第 i 座岛屿直接飞到第 j 座岛屿。
+对于两座不同的岛屿 u, v (1 ≤ u, v ≤ n)，一条从第 u 座岛屿到第 v 座岛屿的路径
+形如 y1 → y2 → · · · → ym，其中 y1 = u，ym = v，且对于所有 l (1 ≤ l ≤ m − 1)，海鸟
+都能够从第 yl 座岛屿直接飞到第 yl+1 座岛屿；其长度为 m − 1，即海鸟在路径中飞行
+的次数。
+小 P 发现，海鸟在迁徙时总是会选择长度最短的路径。对于两座岛屿 u, v (1 ≤ u <
+	v ≤ n)，若从第 u 座岛屿到第 v 座岛屿的长度最短的路径恰. 好. 有两条，海鸟可以分成两
+群，分别沿其中一条飞往第 v 座岛屿；此时称 (u, v) 为双. 径. 岛. 屿. 对. 。两条路径不同，当
+且仅当它们经过的岛屿序列不完全相同。
+你需要帮助小 P 求出双径岛屿对的数量。
+【输入格式】
+从文件 migrate.in 中读入数据。
+本. 题. 包. 含. 多. 组. 测. 试. 数. 据。.
+输入的第一行包含两个非负整数 c, t，分别表示测试点编号与测试数据组数。特别
+地，若 c = 0，则该测试点为样例。
+接下来依次输入 t 组测试数据。对于每组测试数据：
+• 第一行包含两个正整数 n, d，分别表示岛屿数量和海鸟一次最多能飞行的距离。
+• 第二行包含 n 个严格递增的整数 x1, x2, . . . , xn，依次表示每座岛屿的坐标。
+【输出格式】
+输出到文件 migrate.out 中。
+对于每组测试数据，输出一行一个非负整数，表示双径岛屿对的数量。
+【样例 1 输入】
+1 0 2
+2 4 2
+3 1 2 3 4
+4 5 2
+5 1 2 3 4 5
+【样例 1 输出】
+1 1
+2 2
+【样例 1 解释】
+该样例共包含两组测试数据。
+对于第一组测试数据，仅有 1 个双径岛屿对 (1, 4)。从第 1 座岛屿到第 4 座岛屿有
+两条长度最短的路径，分别为 1 → 2 → 4 和 1 → 3 → 4。
+对于第二组测试数据，共有 2 个双径岛屿对，分别为 (1, 4) 和 (2, 5)。从第 1 座岛
+屿到第 5 座岛屿只有一条长度最短的路径 1 → 3 → 5，因此 (1, 5) 不是双径岛屿对。
+【样例 2 输入】
+1 0 2
+2 5 3
+3 -2 -1 0 1 2
+4 6 2
+5 -4 -3 -2 -1 3 6
+【样例 2 输出】
+1 0
+2 1
+【样例 2 解释】
+该样例共包含两组测试数据。
+对于第一组测试数据，共有 0 个双径岛屿对。从第 1 座岛屿到第 5 座岛屿有三条
+长度最短的路径，分别为 1 → 2 → 5，1 → 3 → 5 和 1 → 4 → 5，因此 (1, 5) 不是双径
+岛屿对。
+对于第二组测试数据，仅有 1 个双径岛屿对 (1, 4)。从第 1 座岛屿到第 4 座岛屿有
+两条长度最短的路径，分别为 1 → 2 → 4 和 1 → 3 → 4。第 5 座和第 6 座岛屿均无法
+到达任何其他岛屿。
+【样例 3】
+见题目目录下的 migrate/3.in 与 migrate/3.ans。
+该样例满足测试点 3 ∼ 6 的约束条件。
+【样例 4】
+见题目目录下的 migrate/4.in 与 migrate/4.ans。
+该样例满足测试点 11, 12 的约束条件。
+【样例 5】
+见题目目录下的 migrate/5.in 与 migrate/5.ans。
+该样例满足测试点 15 ∼ 18 的约束条件。
+【样例 6】
+见题目目录下的 migrate/6.in 与 migrate/6.ans。
+该样例满足测试点 19 ∼ 21 的约束条件。
+【数据范围】
+设 N 为单个测试点内所有测试数据的 n 的和。对于所有测试数据，均有：
+• 0 ≤ c ≤ 25，2 ≤ t ≤ 105；
+• 1 ≤ n ≤ 2 × 106，N ≤ 2 × 106，1 ≤ d ≤ 2 × 1018；
+• −1018 ≤ x1 < x2 < · · · < xn ≤ 1018。
+测试点编号 N ≤ 特殊性质
+1, 2 9
+3 ∼ 6 300 无
+7 ∼ 10 5 000
+11, 12
+2 × 106
+A
+13, 14 B
+15 ∼ 18 106 C
+19 ∼ 21 2 × 105
+无
+22 ∼ 25 2 × 106
+特殊性质 A：x1, x2, . . . , xn 构成等差数列。
+特殊性质 B：存在一座岛屿，使得海鸟可以从该岛屿直接飞到任意其他岛屿。
+特殊性质 C：xn − x1 ≤ 10d。
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrst

@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long n,a[200005],m,pre[200005];
+bool cmp(long long a,long long b){
+    return a>b;
+}
+int main(){
+    freopen("and.in",'r',stdin);
+    freopen("and.out",'w',stdout);
+    cin>>n>>m;
+    for(int i=1;i<=n;i++)cin>>a[i];
+    sort(a+1,a+n+1,cmp);
+    pre[1]=a[1];
+    for(int i=2;i<=m;i++)pre[i]=pre[i-1]&a[i];
+    cout<<pre[m];
+    return 0;
+}

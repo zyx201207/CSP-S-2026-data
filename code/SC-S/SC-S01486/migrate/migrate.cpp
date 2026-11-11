@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long n,m,a[500010],sum,k[500010],mi=1e9,ma;
+int main()
+{
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	cin>>n>>m;
+	for(int i=1;i<=m;i++)
+	{
+		cout<<0<<endl;
+	}															     		//																		rdlekjfuiamnjisiqp,cmkpoporrkfjrjhgohhrhjkr																				rteeiy9i5ypoykpypouwyqyerikijamko																				iesjsmhsjquewkmfmjfoeikkkkwekkwkdwkopjfoijfqhfjhqflherhirhireh																						eqiiiutuwyuiqy8732y832e3mlk2emlk2mrkor2j3orp2oirj2rijj3jn2kr2krnkrj2r																		r2oijroirr23r92uroij3jmlwkemknebwkfnwfwfoljoljqjq;kj;qngrqgrj;ijgiq;jgrqg																			egqiulhhwhuehjgrirjojgekejlkejgklejhnewnlue               eijgoejgie																					ijjnahsuyjmeuyryuyuyuyuyuyuyuyuyuyuyyuyuuyyyyyyyyyyyyyyyyyyyyyyyyyyyyy																						yuyuyyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyu																								yuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyu																							uiyyyyyyyyyyyyyyyyyyyiyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuiyuyiuuyiyiyiyiyiyiyiyiyiyiyiyi																													.,/.,////.,,,,,,,,,,,,,,,,,,,,,,,,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.																										egrpogggjer;ke;lgknuijwe;																																	*/
+	return 0; 
+}

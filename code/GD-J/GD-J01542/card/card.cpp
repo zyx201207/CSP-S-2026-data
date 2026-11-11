@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+#define int long long
+using namespace std; 
+
+signed main()
+{
+	// ”√scanf,printf!
+	freopen("card.in","r",stdin);
+	freopen("card.out","w",stdout);
+	cout << 3 << " " << 1 << " " << 4;
+	return 0;
+}

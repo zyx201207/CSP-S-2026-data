@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	string s1,s2,a1,a2;
+	int f=0,b=0,d=0,u=0;
+	cin>>s1>>a1>>s2>>a2;
+	if(s1==s2){
+		cout<<1;
+		f=1;
+	}
+	else{
+		cout<<0;
+		f=0;
+	}
+	if(f==1&&a1[0]+a1[1]==a2[0]+a2[1]){
+		cout<<1;
+		b=1;
+	}
+	else{
+		cout<<0;
+		b=0;
+	}
+	if(b==1){
+		if(a1[2]=='A'||a1[2]=='B'||a1[2]=='C'){
+			if(a2[2]=='A'||a2[2]=='B'||a2[2]=='C'){
+				if(a1[2]!=a2[2]){
+					d=1;
+				}
+			}
+		}
+		if(a1[2]=='D'||a1[2]=='F'){
+			if(a2[2]=='D'||a2[2]=='F'){
+				if(a1[2]!=a2[2]){
+					d=1;
+				}
+			}
+		}
+		if(a1[2]=='C'&&a2[2]=='D'){
+			d=0;
+		}
+		if(a1[2]=='D'&&a2[2]=='C'){
+			d=0;
+		}
+		if(a1[2]==a2[2]){
+			d=0;
+		}
+	}
+	if(d==1){
+		cout<<1;
+	}
+	else{
+		cout<<0;
+	}
+	if(d==1){
+		if(a1[2]-'1'==a2[2]||a1[2]==a2[2]-'1'){
+			u=1;
+		}
+		else{
+			u=0;
+		}
+	}
+	if(u==1){
+		cout<<1;
+	}
+	else{
+		cout<<0;
+	}
+	return 0;
+} 

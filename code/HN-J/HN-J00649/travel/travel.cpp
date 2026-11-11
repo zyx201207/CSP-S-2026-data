@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+//#define DEBUG
+const int N=1;
+string s[5];
+int d[]= {
+	0,1,2,3,5,0,6
+};
+int main() {
+	cin.tie(0);
+	cout.tie(0);
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	for(int i=1; i<=4; i++)
+		cin>>s[i];
+	if(s[1]==s[3]) {
+		cout<<1;
+		if(s[2][0]==s[4][0]&&s[2][1]==s[4][1]) {
+			cout<<1;
+			if((s[2][2]<='C'&&s[4][2]<='C')||(s[2][2]>'C'&&s[4][2]>'C')) {
+				cout<<1;
+				if(abs(d[s[2][2]-'A'+1]-d[s[4][2]-'A'+1])==1)
+					cout<<1;
+				else
+					cout<<0;
+			} else cout<<"00";
+		} else
+			cout<<"000";
+	} else
+		cout<<"0000";
+	cout<<'\n';
+}
+

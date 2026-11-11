@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>//ÀÏÌì±£ÓÓ£¡
+using namespace std;
+int t;
+int n,d;
+int x[2000005];
+int main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	cin>>t;
+	while(t--){
+		cin>>n>>d;
+		for(int i=1;i<=n;i++){
+			cin>>x[i];
+		}
+		cout<<0<<"\n";
+	}
+	return 0;
+}

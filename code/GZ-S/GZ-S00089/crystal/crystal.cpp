@@ -1,0 +1,39 @@
+//GZ-S00089 黄浩然 贵阳市第三中学 
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+ll n;ll m;
+vector<ll>a;
+vector<ll>pre;
+bool check(ll mid){
+		for(ll i=mid;i<=n;i++){
+			if(mid*a[i]-(pre[i]-pre[i-mid])<=m)return true;
+		}
+		return false;
+}
+void fx(){
+	cin>>n>>m;
+	a.resize(n+1,0);
+	pre.resize(n+1,0);
+	for(ll i=1;i<=n;i++)cin>>a[i];
+	sort(a.begin()+1,a.end());
+	for(ll i=1;i<=n;i++)pre[i]=pre[i-1]+a[i];
+	ll l=1,r=n+1;
+	while(l+1!=r){
+		ll mid=(l+r)>>1;
+		(check(mid)?l:r)=mid;
+	}
+	cout<<l<<endl;
+}
+
+int main(){
+	ios::sync_with_stdio(false);
+	cin.tie(0),cout.tie(0);
+	freopen("crystal.in","r",stdin);
+	freopen("crystal.out","w",stdout);
+	ll t=1;
+	while(t--)fx();
+}
+
+

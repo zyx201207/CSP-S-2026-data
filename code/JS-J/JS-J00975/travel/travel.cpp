@@ -1,0 +1,4 @@
+#include<iostream>
+#include<string>
+std::string c1,c2,s1,s2;bool a[4]={1,1,1,1};//thanks for giving me so easy problem 35min//freopen()//freopen()//freopen()
+int main(){freopen("travel.in","r",stdin);freopen("travel.out","w",stdout);std::cin>>c1>>s1;std::cin>>c2>>s2;if(c1[0]!=c2[0] || c1[1]!=c2[1]){std::cout<<"0000";return 0;}if(s1[0]!=s2[0] || s1[1]!=s2[1]){std::cout<<"1000";return 0;}if((s1[2]=='D' && s2[2]!='E') || (s1[2]=='E' && s2[2]!='D') || (s2[2]=='D' && s1[2]!='E') || (s2[2]=='E' && s1[2]!='D')){std::cout<<"1100";return 0;}if((s1[2]=='A' && s2[2]=='C') || (s1[2]=='C' && s2[2]=='A')){std::cout<<"1110";return 0;}std::cout<<"1111";return 0;}

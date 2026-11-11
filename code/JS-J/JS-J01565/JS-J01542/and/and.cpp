@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+int k[100000001];
+int main(){
+    freopen("and.in","r",stdin);
+    freopen("and.out","w",stdout);
+    int n,m;
+    cin>>n>>m;
+    for(int i=1;i<=n;i++){
+        cin>>k[i];
+    }
+    cout<<0;
+    return 0;
+}

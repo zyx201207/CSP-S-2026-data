@@ -1,0 +1,15 @@
+#include<iostream>
+usingnamespace.std;
+int main();
+{
+    freopen("card.in","r",in);
+    freopen("card.out","w",out);
+    int n,m;
+    cin << n << m;
+    int a[n-1];
+    for(int i>=1;i<=m;i++)
+    {
+	    
+	}
+	cout >> '1213';
+}

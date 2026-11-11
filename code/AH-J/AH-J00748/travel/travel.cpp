@@ -1,0 +1,114 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+string s,s1,s2,s3;
+int main()
+{
+    freopen("travel.in","r",stdin);
+    freopen("travel.out","w",stdout);
+cin>>s>>s1>>s2>>s3;
+ll zw1,zw2;
+zw1=(s1[0]-'0')*10+(s1[1]-'0');
+zw2=(s3[0]-'0')*10+(s3[1]-'0');
+ll cx1,cx2;
+cx1=(s[0]-'0')*10+(s[1]-'0');
+cx2=(s2[0]-'0')*10+(s2[1]-'0');
+char typ1,typ2;
+typ1=s1[2];
+typ2=s3[2];
+if(cx1==cx2){
+    cout<<"1";
+}else{
+    cout<<"0";
+}
+if(cx1==cx2&&zw1==zw2){
+    cout<<"1";
+}else{
+    cout<<"0";
+}
+ll k=1;
+if(cx1==cx2&&zw1==zw2){
+     if(typ1=='B'){
+        if(typ2=='C'||typ2=='A'){
+            cout<<"1";
+            k=0;
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='A'){
+        if(typ2=='B'||typ2=='C'){
+            cout<<"1";
+            k=0;
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='C'){
+        if(typ2=='B'||typ2=='A'){
+            cout<<"1";
+            k=0;
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='F'){
+        if(typ2=='D'){
+            cout<<"1";
+            k=0;
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='D'){
+        if(typ2=='F'){
+            cout<<"1";
+            k=0;
+        }else{
+            cout<<"0";
+        }
+    }
+}else{
+    cout<<"0";
+}
+   if(cx1==cx2&&zw1==zw2&&k==0){
+    if(typ1=='B'){
+        if(typ2=='C'||typ2=='A'){
+            cout<<"1";
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='A'){
+        if(typ2=='B'){
+            cout<<"1";
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='C'){
+        if(typ2=='B'){
+            cout<<"1";
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='F'){
+        if(typ2=='D'){
+            cout<<"1";
+        }else{
+            cout<<"0";
+        }
+    }
+    if(typ1=='D'){
+        if(typ2=='F'){
+            cout<<"1";
+        }else{
+            cout<<"0";
+        }
+    }
+   }else{
+       cout<<"0";
+   }
+return 0;
+}

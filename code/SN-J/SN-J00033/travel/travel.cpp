@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n,m,h=0,h1=0,h2=0,h3=0;
+	string a,b;
+	cin>>n>>a>>m>>b;	
+	if(m==n){
+		h+=1;
+	}
+	else{
+		h+=0;
+	}
+	if(m==n&&a[0]==b[0]&&a[1]==b[1]){
+		h1+=1;
+	}
+	else{
+		h1+=0;
+	}
+	if(m==n){
+		if(a[2]=='B'&&b[2]=='C'||a[2]=='D'&&b[2]=='E'||a[2]=='A'&&b[2]=='B'||a[2]=='A'&&b[2]=='C'){
+			h2+=1;
+		}
+		else{
+			h2+=0;
+		}
+	}
+	else{
+		h2+=0;
+	}
+	if(m==n){
+		if(h2==1){
+			if(a[2]=='B'&&b[2]=='C'){
+				h3+=1; 
+			} 
+			if(a[2]=='D'&&b[2]=='E'){
+				h3+=1;
+			}
+			if(a[2]=='A'&&b[2]=='B'){
+				h3+=1;
+			}
+		}
+		else{
+			h3+=0;
+		}
+	}
+	else{
+		h3+=0;
+	}
+	cout<<h<<h1<<h2<<h3;
+} 

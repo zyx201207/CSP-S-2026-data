@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n, m, a[500010], b[300010], ans[300010];
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
+	freopen("card.in", "r", stdin);
+	freopen("card.out", "w", stdout);
+	cin >> n >> m;
+	for (int i = 1; i <= n; i++) cin >> a[i], b[a[i]] = i;
+	if ((long long)n * m > 6e8) {
+		for (int i = 1; i <= n; i++) ans[a[i]]++;
+		cout << ans[1];
+		for (int i = 2; i <= m; i++) cout << ' ' << ans[i];
+		return 0;
+	}
+	for (int i = 1; i <= n; i++)
+		for (int j = i; j <= n; j = b[a[j]] + 1)
+			ans[a[j]]++;
+	cout << ans[1];
+	for (int i = 2; i <= m; i++) cout << ' ' << ans[i];
+	return 0;
+}

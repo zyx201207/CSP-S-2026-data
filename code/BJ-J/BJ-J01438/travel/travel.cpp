@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+string a,b,a1,b1;
+bool c,d,e;
+int main(){
+    freopen("travel.in","r",stdin);
+    freopen("travel.out","w",stdout);
+    cin >> a >> a1 >> b >> b1;
+    if(a == b){
+        cout << 1;
+        c = 1;
+    }else{
+        cout << 0;
+        c = 0;
+    }
+    if(a1[0] == b1[0] && a1[1] == b1[1] && c){
+        cout << 1;
+        d = 1;
+    }else{
+        cout << 0;
+        d = 0;
+    }
+    if((a1[2] >= 'A' && a1[2] <='C' && b1[2] >= 'A' && b1[2] <= 'C' || (a1[2] == 'D' || a1[2] =='F') && (b1[2] == 'D' || b1[2] <= 'F')) && d){
+        cout << 1;
+        e = 1;
+    }else{
+        cout << 0;
+        e = 0;
+    }
+    if((a1[2] == 'A' && b1[2] == 'B' || a1[2] == 'B' && b1[2] == 'C' || a1[2] == 'D' && b1[2] == 'F' || a1[2] == 'C' && b1[2] == 'B' || a1[2] == 'B' && b1[2] == 'A' || a1[2] == 'F' && b1[2] == 'D') && e){
+        cout << 1;
+    }else{
+        cout << 0;
+    }
+    return 0;
+}

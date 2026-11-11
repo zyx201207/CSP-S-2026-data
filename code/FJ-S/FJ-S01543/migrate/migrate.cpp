@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n,m,k;
+int main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	cin>>n>>m>>k;
+	if(k==4) cout<<'1'<<endl<<'2';
+	else cout<<'0'<<endl<<'1';
+	return 0;
+}

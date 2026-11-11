@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	string n,m,n1,m1;
+	cin>>n>>n1>>m>>m1;
+	if(n==m)
+	{
+		if(n1[0]==m1[0]&&n1[1]==m1[1])
+		{
+			if(n1[2]=='A'||n1[2]=='B'||n1[2]=='C')
+			{
+				if(m1[2]=='A'||m1[2]=='B'||m1[2]=='C')
+				{
+					if(n1[2]=='B'||m1[2]=='B')
+					{
+						cout<<"1111";
+					}
+					else{
+						cout<<"1110";
+					}
+				}
+				else
+				{
+					cout<<"1100";
+				}
+			}
+			else
+			{
+				if(m1[2]=='D'||m1[2]=='F')
+				{
+					cout<<"1111";
+				}
+				else
+				{
+					cout<<"1100";
+				}
+			}
+		}
+		else
+		{
+			cout<<"1000";
+		}
+	}
+	else
+	{
+		cout<<"0000";
+	}
+	return 0;
+}

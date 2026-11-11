@@ -1,0 +1,12 @@
+#inlcude<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	//freopen(".in","r",stdin);
+	//freopen(".out","w",stdout);
+	while(1)
+	{
+		cout<<"I cant done it";
+	}
+	return 0;
+}

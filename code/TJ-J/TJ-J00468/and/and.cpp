@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define int long long
+int a[5000005];
+signed main()
+{
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	int n,m;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>a[i];
+	 	
+	}
+	cout<<0; 
+	return 0;
+}

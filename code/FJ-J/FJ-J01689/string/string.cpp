@@ -1,0 +1,79 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long c,m[211111],n,d,l,r,h,ll,rr,ans,w,v;
+char a[211111];
+int main()
+{
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		cin>>m[i]>>a[i];
+		c=c+m[i];
+	}
+	l=1;
+	r=c;
+	ll=1;
+	rr=n;
+	while(l<=r)
+	{
+		if(a[ll]==a[rr])
+		{
+			if(m[ll]>=m[rr]) 
+			{
+				h=m[rr];
+				w=1;
+			}
+			if(m[ll]<m[rr]) 
+			{
+				h=m[ll];
+				v=1;
+			}
+			l=l+h;
+			r=r-h;
+			if(w==1)
+			{
+				rr--;
+				m[ll]=m[ll]-h;
+			}
+			if(v==1)
+			{
+				ll++;
+				m[rr]=m[rr]-h;
+			}
+			w=0;
+			v=0;
+		}
+		else
+		{
+			if(m[ll]>=m[rr]) 
+			{
+				h=m[rr];
+				w=1;
+			}
+			if(m[ll]<m[rr]) 
+			{
+				h=m[ll];
+				v=1;
+			}
+			l=l+h;
+			r=r-h;
+			if(w==1)
+			{
+				rr--;
+				m[ll]=m[ll]-h;
+			}
+			if(v==1)
+			{
+				ll++;
+				m[rr]=m[rr]-h;
+			}
+			w=0;
+			v=0;
+			ans=ans+h;
+		}
+	}
+	cout<<ans;
+	return 0;
+} 

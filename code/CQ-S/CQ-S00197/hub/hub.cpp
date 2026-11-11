@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+int c,n,m,d,q;
+int w[100005];
+int k[505][505];
+int main() {
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	cin >> c >> n >> m >> d >> q;
+	for(int i = 1;i <= m; i++) cin >> w[i];
+	cout << 1 << '\n' << 1;
+	return 0;
+}

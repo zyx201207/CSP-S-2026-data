@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int c,n,m,d,q;
+int main()
+{
+	freopen("subway.in","r",stdin);
+	freopen("subway.out","w",stdout);
+	cin>>c>>n>>m>>d>>q;
+	cout<<"32"<<endl;
+	cout<<"17"<<endl;
+	return 0;
+}

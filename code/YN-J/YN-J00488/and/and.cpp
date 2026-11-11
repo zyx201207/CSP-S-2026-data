@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+int n, m, x;
+
+signed main() {
+	freopen("and.in", "r", stdin);
+	freopen("and.out", "w", stdin);
+	cin >> n >> m;
+	for (int i = 1; i <= n; i++)
+		cin >> x;
+	cout << x;
+	return 0;
+}

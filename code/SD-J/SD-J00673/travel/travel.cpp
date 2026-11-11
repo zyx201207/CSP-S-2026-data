@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+#define int long long
+using namespace std;
+signed main(){
+	ios::sync_with_stdio(0);
+	cin.tie(0);cout.tie(0);
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	int c1,c2,f1=0,f2=0,f3=0,f4=0;
+	string s1,s2;
+	cin>>c1>>s1>>c2>>s2;
+	int d1=s1[0]*10+s1[1],d2=s2[0]*10+s2[1];
+	if(c1==c2){
+		f1=1;
+		if(d1==d2){
+			f2=1;
+			if((s1[2]<='C'&&s2[2]<='C')||(s1[2]>='D'&&s2[2]>='D')){
+				f3=1;
+				if(((s1[2]<='C'&&s2[2]<='C')&&abs(s1[2]-s2[2])==1)||(abs(s1[2]-s2[2])==2&&(s1[2]>='D'&&s2[2]>='D'))){
+					f4=1;
+				}
+			}
+			
+		}
+	}
+	cout<<f1<<f2<<f3<<f4;
+	return 0;
+} 

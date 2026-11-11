@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namnespace std;
+int main()
+{
+    freopen("string.in",'r',stdin);
+    freopen("string.out",'w',stdout);
+    int n;
+    cin >> n
+    for(int i=0; i<n; i++)
+    {
+
+    }
+    return 0;
+}

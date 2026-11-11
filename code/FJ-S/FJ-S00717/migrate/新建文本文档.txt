@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int a[100005];
+int r[100005];
+int b[2000005];
+int main(){
+	freopen("migrate","r",stdin);
+	freopen("migrate","w",stdout);
+	int c,t;
+	cin>>c>>t;
+	for(int i=0;i<=t;i++){
+		cin>>a[i]>>r[i];
+		for(int i=1;i<=a[i];i++){
+		}cin>>b[i];
+	}
+	for(int i=0;i<=t;i++){
+		for(int i=1;i<=a[i];i++){
+			if(b[i+2]-b[i]<=r[i]){
+				cout<<0<<endl;
+			}
+			else{
+				cout<<1<<endl;
+			}
+		}
+	}
+	return 0;
+}

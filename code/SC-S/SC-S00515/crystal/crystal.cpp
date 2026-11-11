@@ -1,0 +1,20 @@
+include<
+
+const int N=5e5+10;
+int n,m,ans;
+
+int main{
+	//freopen("crystal.in","r",stdin);
+	//freopen("crystal.out","w",stdout);
+	cin>>n>>m;
+	for(int i=1;i<=n;i++){
+		cin>>a;
+	}
+	
+	
+	
+	
+	cout<<"3";
+	
+	return 0;
+} 

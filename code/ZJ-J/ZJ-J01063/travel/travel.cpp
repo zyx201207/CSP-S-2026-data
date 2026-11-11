@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a,b,c,d;
+char x,y;
+bool is(char n,char m){
+	if(x == n && y == m || x == m && y == n)
+	return 1;
+	return 0;
+}
+signed main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cin >> a >> b >> x >> c >> d >> y;
+	if(a == c){
+		cout << 1;
+		if(b == d){
+			cout << 1;
+			if(x <= 'C' && y <= 'C' || x > 'C' && y > 'C'){
+				cout << 1;
+				if(is('A','B') || is('B','C') || is('D','F')){
+					cout << 1;
+				}
+				else cout << 0;
+			}
+			else cout << "00";
+		} 
+		else cout << "000";
+	} 
+	else cout << "0000";
+	return 0;
+}

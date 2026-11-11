@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int a[10005]
+int main()
+{
+
+    freopen("string.cpp", 'r', "stay.in");
+    freopen("string.cpp", 'w', "stay.out");
+    int n;
+    cin >> n;
+    for(int i = 0; i <= n; i++){
+        cin << a[i]
+    }
+    cout << '0';
+
+    return 0;
+}
+

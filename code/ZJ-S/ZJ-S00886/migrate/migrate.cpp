@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long d,b[2000010];
+int c,T,i,t,w,x,mi,n,s,dp[2000010],a[2000010];
+signed main(){
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	cin>>c>>T;
+	if(c==11||c==12){
+		while(T--){
+			cin>>n>>d;
+			for(i=1;i<=n;i++)cin>>a[i];
+			x=a[2]-a[1];
+			if(x<2*d||x>=3*d){
+				cout<<"0\n";
+				continue;
+			}
+			else{
+				cout<<n-3<<"\n";
+				continue;
+			}
+		}
+	}
+	while(T--){
+		cin>>n>>d;
+		mi=2e9;
+		for(i=1;i<=n;i++){
+			cin>>a[i];
+			if(i!=1)mi=min(mi,a[i]-a[i-1]);
+		}
+		if(mi>d){
+			cout<<"0\n";
+			continue;
+		}
+		for(i=2;i<=n;i++)
+			b[i]=a[i]-a[i-1],b[i]+=b[i-1];
+		s=0;
+		for(i=1;i<=n;i++){
+			t=w=i;
+			memset(dp,sizeof(dp),0);
+			while(1){
+				w++;
+				if(w>n)break;
+				while(b[w]-b[t]>d)t++;
+				if(t==w){
+					dp[w]=0;
+					continue;
+				}
+				dp[w]=dp[t]+1;
+				if(w-t==2)
+					if(dp[t]==dp[t+1])s++;
+				if(w-t>2)
+					if(dp[t]==dp[t+1]&&dp[t]!=dp[t+2])s++;
+			}
+		}
+		cout<<s<<"\n";
+	}
+	return 0;
+}

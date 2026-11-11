@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	//freopen("and.in","r","stdin");
+	//freopen("and.out","w","stdout");
+	int d;
+	int e;
+	cin >>d>>e;
+	d=e*d;
+	cout <<d;
+
+
+	
+	return 0;
+}

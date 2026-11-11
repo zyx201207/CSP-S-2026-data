@@ -1,0 +1,11 @@
+#include <cstdio>
+int main(){
+    freopen("hub.in", "r", stdin);
+    freopen("hub.out", "w", stdout);
+    int c, t;
+    scanf("%d %d", &c, &t);
+    while(t--){
+        printf("0\n");
+    }
+    return 0;
+}

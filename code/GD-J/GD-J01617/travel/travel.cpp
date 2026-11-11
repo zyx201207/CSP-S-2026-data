@@ -1,0 +1,39 @@
+#include<cstdio>
+#include<iostream>
+using namespace std;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	char rc[4],rz[4],xc[4],xz[4];
+	cin>>rc>>rz>>xc>>xz;
+	if(rc[0]==xc[0]&rc[1]==xc[1]){
+		cout<<"1";
+		if(rz[0]==xz[0]&&rz[1]==xz[1]){
+			cout<<"1";
+			if(rz[2]=='A'||rz[2]=='B'||rz[2]=='C'){
+				if(xz[2]=='A'||xz[2]=='B'||xz[2]=='C'){
+					cout<<"1";
+					if(rz[2]=='B'||xz[2]=='B'){
+						cout<<"1";
+					}else{
+						cout<<"0";
+					}
+				}else{
+					cout<<"00";
+				}
+			}else{
+				if(xz[2]=='D'||xz[2]=='E'){
+					cout<<"11";
+				}else{
+					cout<<"00";
+				}
+			}
+		}else{
+			cout<<"000";
+		}
+	}else{
+		cout<<"0000";
+	}
+} 

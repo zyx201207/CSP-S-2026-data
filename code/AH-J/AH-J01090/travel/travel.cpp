@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+using namespace std;
+string c1,s1,c2,s2;
+bool b,c,d,e;
+int main(){
+freopen("travel.in","r",stdin);
+freopen("travel.out","w",stdout);
+cin>>c1>>s1>>c2>>s2;
+if(c1[0]==c2[0]&&c1[1]==c2[1]){
+    cout<<1;
+    b=1;
+}
+if(b==0){
+    cout<<"0";
+    cout<<"0";
+    cout<<"0";
+    cout<<"0";
+}
+if(b==1){
+    if(s1[0]==s2[0]&&s1[1]==s2[1]){
+        cout<<1;
+        c=1;
+    }
+    if(c==0){
+        cout<<"000";
+    }
+}
+if(c==1){
+    if('A'<=s1[2]&&s1[2]<='C'){
+        if('A'<=s2[2]&&s2[2]<='C'){
+            d=1;
+            cout<<1;
+        }
+    }
+     if(s1[2]=='D'||s1[2]=='F'){
+        if(s2[2]=='D'||s2[2]=='F'){
+            d=1;
+            cout<<1;
+        }
+    }
+    if(d==0){
+        cout<<"00";
+    }
+}
+if(d==1){
+    if(s1[2]=='D'||s1[2]=='F'){
+        if(s2[2]=='D'||s2[2]=='F'){
+            e=1;
+            cout<<1;
+        }
+    }
+    if(s1[2]=='A'&&s2[2]=='B'){
+        e=1;
+        cout<<1;
+    }
+    if(s2[2]=='A'&&s1[2]=='B'){
+        e=1;
+        cout<<1;
+    }
+     if(s1[2]=='B'&&s2[2]=='C'){
+        e=1;
+        cout<<1;
+    }
+    if(s2[2]=='B'&&s1[2]=='C'){
+        e=1;
+        cout<<1;
+    }
+    if(e==0){
+        cout<<0;
+    }
+
+}
+return 0;
+}

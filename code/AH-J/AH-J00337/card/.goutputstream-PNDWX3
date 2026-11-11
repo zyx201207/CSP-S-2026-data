@@ -1,0 +1,36 @@
+# include <bits/stdc++.h>
+using namespace std;
+
+const int N = 5e5+5;
+int n,m;
+int a[N],k[N],f[N],ans[N];
+int main()
+{
+    //freopen("card.in","r",stdin);
+    //freopen("card.out","w",stdout);
+	scanf("%d%d",&n,&m);
+	for (int i = 1; i <= n; i++) 
+	{
+		scanf("%d",&a[i]);
+		if (f[a[i]]) k[f[a[i]]] = i;
+		f[a[i]] = i;
+	}
+	for (int i = 1; i <= n; i++) printf("%d ",k[i]);
+	for (int i = 1; i <= n; i++)
+	{
+		memset(f,0,sizeof(f));
+		for (int j = i; j <= n; j++)
+		{
+			f[a[j]] = 1;
+						
+			if (k[j]) 
+			{
+				j = k[j];
+				j--;	
+			}				
+		}
+		for (int i = 1; i <= m; i++) ans[i] += f[i];
+	}
+	for (int i = 1; i <= m; i++) printf("%d ",ans[i]);
+    return 0;
+}

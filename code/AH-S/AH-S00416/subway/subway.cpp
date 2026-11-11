@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a[500005],p[205][20005],t[205][20005],k[500005];
+int main()
+{
+	freopen("subway.in","r",stdin);
+	freopen("subway.out","w",stdout);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
+	int C,m,n,d,q,l,r,i,j,ans=0;
+	cin>>C>>n>>m>>d>>q;
+	for(i=1;i<=m;i++)
+	{
+		cin>>a[i];
+	}
+	for(i=1;i<=n;i++)
+	{
+		cin>>k[i];
+		for(j=1;j<=k[i];j++)
+		{
+			cin>>p[i][j]>>t[i][j];
+		}
+	}
+	while(q--)
+	{
+		ans=0;
+		cin>>l>>r;
+		ans+=a[l];
+		ans+=a[r];
+		for(i=1;i<=n;i++)
+		{
+			for(j=1;j<=k[i];j++)
+			{
+				if(p[i][j]==l)
+				{
+					ans+=t[i][j];
+					break;
+				}
+			}
+		}
+		for(i=1;i<=n;i++)
+		{
+			for(j=1;j<=k[i];j++)
+			{
+				if(p[i][j]==r)
+				{
+					ans+=t[i][j];
+					break;
+				}
+			}
+		}
+		cout<<ans<<"\n";
+	}
+}

@@ -1,0 +1,12 @@
+//GZ-S00232   兰弟军   遵义周林学校
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+//	freopen("hub.in","r",stdin);
+//	freopen("hub.out","w",stdout);
+    
+    return 0;
+//	fclose(stdin);
+//	fclose(stdout);
+}
+

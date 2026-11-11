@@ -1,0 +1,3 @@
+// The last contest in my OI life has ended...
+// 100+92+32+0
+// Bad ending.

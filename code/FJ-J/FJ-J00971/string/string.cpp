@@ -1,0 +1,86 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long n,a[200010],p,ans,tmp,i,j;
+char c[200010];
+int main(){
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	cin>>n;
+	ans=0;
+	tmp=0;
+	for(i=1;i<=n;i++){
+		cin>>a[i]>>c[i];
+		tmp+=a[i];
+	}
+	i=1;
+	j=n;
+	if(tmp%2==1){
+		while(i!=j){
+			if(a[i]>a[j]){
+				if(c[i]==c[j]){
+					a[i]-=a[j];
+					j--;
+				}else{
+					a[i]-=a[j];
+					ans+=a[j];
+					j--;
+				}
+			}else if(a[i]<a[j]){
+				if(c[i]==c[j]){
+					a[j]-=a[i];
+					i++;
+				}else{
+					a[j]-=a[i];
+					ans+=a[i];
+					i++;
+				}
+			}else{
+				if(c[i]==c[j]){
+					a[j]=a[i]=0;
+					i++;
+					j--;
+				}else{
+					ans+=a[i];
+					a[j]=a[i]=0;
+					i++;
+					j--;
+				}
+			}
+		}
+	}else{
+		while(i-j!=1){
+			if(a[i]>a[j]){
+				if(c[i]==c[j]){
+					a[i]-=a[j];
+					j--;
+				}else{
+					a[i]-=a[j];
+					ans+=a[j];
+					j--;
+				}
+			}else if(a[i]<a[j]){
+				if(c[i]==c[j]){
+					a[j]-=a[i];
+					i++;
+				}else{
+					a[j]-=a[i];
+					ans+=a[i];
+					i++;
+				}
+			}else{
+				if(c[i]==c[j]){
+					a[j]=a[i]=0;
+					i++;
+					j--;
+				}else{
+					ans+=a[i];
+					a[j]=a[i]=0;
+					i++;
+					j--;
+				}
+			}
+		}
+	}
+	cout<<ans;
+	return 0;
+}

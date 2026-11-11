@@ -1,0 +1,71 @@
+#include<iostream>
+using namespace std;
+long long int a[200005];
+string b[200005];
+int main()
+{
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout); 
+	long long int i,j,n,s=0,num=0,t=0,sum=0;
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		cin>>a[i]>>b[i];
+		s+=a[i];	
+	}	
+	s=s/2;
+	for(i=1;i<=s;i+=0)
+	{
+		num++;
+		t++;
+		if(b[num]==b[n-t+1])
+		{
+			if(a[num]==a[n-t+1])
+			{
+				i+=a[num];
+			}
+			else
+			{
+				if(a[num]>a[n-t+1])
+				{
+					i+=a[n-num+1];
+					a[num]=a[num]-a[n-t+1]; 	
+					num--;
+				}
+				else
+				{
+					i+=a[num];
+					a[n-t+1]=a[n-t+1]-a[num];
+					t--;
+				}
+			}
+		}
+		else
+		{
+			if(a[num]==a[n-t+1])
+			{
+				i+=a[num];
+				sum+=a[num];
+			}
+			else
+			{
+				if(a[num]>a[n-t+1])
+				{
+					i+=a[n-num+1];
+					sum+=a[n-num+1];
+					a[num]=a[num]-a[n-t+1]; 	
+					num--;
+				}
+				else
+				{
+					sum+=a[num];
+					i+=a[num];
+					a[n-t+1]=a[n-t+1]-a[num];
+					t--;
+				}
+			}
+		}
+	}
+	cout<<sum;
+	return 0;
+} 

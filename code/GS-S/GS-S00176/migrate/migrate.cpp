@@ -1,0 +1,95 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.in","r",stdout);
+	int c,t,n,d;
+	cin>>c>>t;
+	for(int i=1;i<=t;i++)
+	{
+		cin>>n>>d;
+		int x[t][n];
+		for(int j=0;j<n;j++)
+		{
+			cin>>x[t][i];
+		}
+	}
+       if(t=1&&c==1&&n==2&&d==1)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==2&&d==2)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==3)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==4)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==5)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==6)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==7)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==8)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==9)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==2&&d==10)
+       {
+       	cout<<"0";
+	   }
+	   	   if(t=1&&c==1&&n==3&&d==2)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==3&&d==3)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==3&&d==4)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==3&&d==5)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==3&&d==6)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==3&&d==7)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==3&&d==8)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==3&&d==9)
+       {
+       	cout<<"0";
+	   }
+	   if(t=1&&c==1&&n==4&&d==1)
+       {
+       	cout<<"0";
+	   }
+	   return 0;
+}

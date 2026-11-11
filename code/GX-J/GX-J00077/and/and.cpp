@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long a[200005];
+
+int main(){
+    freopen("and.in", "r", stdin);
+    freopen("and.out", "w", stdout);
+
+    int n, m;
+    cin >> n >> m;
+
+    for(int i=1; i<=n; i++) cin >> a[i];
+
+    long long ans = INT_MIN;
+    if(m == 1){
+        ans = INT_MIN;
+        for(int i=1; i<=n; i++) ans = max(ans, a[i]);
+    } else if(m == n){
+        for(int i=1; i<=n; i++) ans = ans & a[i];
+    } else if(m == 2){
+        ans = INT_MIN;
+        for(int i=1; i<n; i++) for(int j=i+1; j<=n; j++){
+            ans = max(ans, a[i]&a[j]);
+        }
+    }
+
+    cout << ans <<endl;
+
+    fclose(stdin);
+    fclose(stdout);
+    return 0;
+}

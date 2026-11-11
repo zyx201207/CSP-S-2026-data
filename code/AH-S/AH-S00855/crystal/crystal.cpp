@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long a[5001],b[5001];
+int main()
+{
+	freopen("crystal.in","r",stdin);
+	freopen("crystal.out","w",stdout);
+	long long i,j,k,n,m,maxn=0,s=0,t=0;
+	cin>>n>>m;
+	t=m;
+	for(i=1;i<=n;i++)
+	{
+		scanf("%lld",&a[i]);
+		b[i]=a[i];
+	}
+	sort(a+1,a+n+1);
+	for(i=2;i<=n;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			if((a[i]-a[j])>m)
+			{
+				for(k=1;k<=n;k++)
+				{
+					if(a[k]==a[i])
+					{
+						s++;
+					}
+					a[k]=b[k];
+				}
+				maxn=max(maxn,s);
+				s=0;
+				m=t;
+			}
+			else if(j==i)
+			{
+				m=m-(a[i]-a[j]);
+				a[j]=a[i];
+				for(k=1;k<=n;k++)
+				{
+					if(a[k]==a[i])
+					{
+						s++;
+					}
+					a[k]=b[k];
+				}
+				maxn=max(maxn,s);
+				s=0;
+				m=t;
+			}
+			else
+			{
+				m=m-(a[i]-a[j]);
+				a[j]=a[i];
+			}
+		}
+	}
+	cout<<maxn;
+}

@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    freopen("travel.in","r",stdin);
+    freopen("travel.out","w",stdout);
+    string c1,c2;
+    string s1={01A,01B,01C,01D,01F,02A,02B,02C,02D,02F,03A,03B,03C,03D,03F,04A,04B,04C,04D,04F,05A,05B,05C,05D,05F,06A,06B,06C,06D,06F,07A,07B,07C,07D,07F,08A,08B,08C,08D,08F,09A,09B,09C,09D,09F,10A,10B,10C,10D,10F,11A,11B,11C,11D,11F,12A,12B,12C,12D,12F,13A,13B,13C,13D,13F,14A,14B,14C,14D,14F,15A,15B,15C,15D,15F,16A,16B,16C,16D,16F,17A,17B,17C,17D,17F,18A,18B,18C,18D,18F};
+    string s2={01A,01B,01C,01D,01F,02A,02B,02C,02D,02F,03A,03B,03C,03D,03F,04A,04B,04C,04D,04F,05A,05B,05C,05D,05F,06A,06B,06C,06D,06F,07A,07B,07C,07D,07F,08A,08B,08C,08D,08F,09A,09B,09C,09D,09F,10A,10B,10C,10D,10F,11A,11B,11C,11D,11F,12A,12B,12C,12D,12F,13A,13B,13C,13D,13F,14A,14B,14C,14D,14F,15A,15B,15C,15D,15F,16A,16B,16C,16D,16F,17A,17B,17C,17D,17F,18A,18B,18C,18D,18F};
+    cin>>c1>>s1>>c2>>s2;
+    if(c1==c2){
+        cout<<"1";
+    }
+    else if(c1!=c2){
+        cout<<"0";
+    }
+
+    if(c1==c2 && (s1[1]==s2[1] && s1[2]=s2[2])){
+        cout<<"11";
+    }
+
+    return 0;
+}
+//WO 喜欢 LUO YU XUAN

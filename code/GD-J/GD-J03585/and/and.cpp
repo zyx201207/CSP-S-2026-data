@@ -1,0 +1,94 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	int n,m,l,p,q,r,ans=0;
+	cin>>n>>m;
+	int a[200005];
+	for(int i=0;i<n;i++)
+	{
+		cin>>a[i];
+	}
+	if(m==1)
+	{
+		for(int i=0;i<n;i++)
+		{
+			ans=max(a[i],ans);
+		}
+	}
+	if(m==n)
+	{
+		ans=a[0];	
+		for(int i=1;i<n;i++)
+		{
+			ans=ans&a[i];	
+		}
+	}
+	if(m==2)
+	{
+		l=0;
+		r=1;
+		for(;l<r&&l<n-1;)
+		{
+			for(;r<n;r++)
+			{
+				ans=max(ans,a[l]&a[r]);
+			}
+			l++;
+			r=l+1;
+		}
+	}
+	if(m==3)
+	{
+		l=0;
+		p=1;
+		r=2;
+		for(;l<p&&l<n-2;)
+		{
+			for(;p<n-1&&p<r;)
+			{
+				for(;r<n;r++)
+				{
+					ans=max(ans,a[l]&a[p]&a[r]);
+				}	
+				p++;
+				r=p+1;
+			}
+			l++;
+			p=l+1;
+			r=l+2;	
+		}
+	}
+	if(m==4)
+	{
+		l=0;
+		p=1;
+		q=2;
+		r=3;
+		for(;l<p&&l<n-3;)
+		{
+			for(;p<n-2&&p<q;)
+			{
+				for(;q<n-1&&q<r;)
+				{
+					for(;r<n;r++)
+					{
+						ans=max(ans,a[l]&a[p]&a[q]&a[r]);
+					}	
+					q++;
+					r=q+1;
+				}
+				p++;
+				q=p+1;
+				r=p+2;
+			}
+			l++;
+			p=l+1;
+			q=l+2;
+			r=l+3;	
+		}
+	}
+	cout<<ans;
+}

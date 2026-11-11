@@ -1,0 +1,9 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+    freopen("subway.in","r",stdin);
+    freopen("subway.out","w",stdout);
+    cout<<35<<endl<<16;
+return 0;
+}

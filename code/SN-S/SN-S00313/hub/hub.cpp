@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+
+  	ios::sync_with_stdio(0);
+  	cin.tie(0);
+  	cout.tie(0);
+	
+	srand(time(0));
+	ll c,t;
+	cin>>c>>t;
+	while (t--) cout<<rand()%3<<"\n";
+ 
+
+
+}
+
+

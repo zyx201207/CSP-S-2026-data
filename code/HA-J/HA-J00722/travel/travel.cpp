@@ -1,0 +1,70 @@
+#include<bits/stdc++.h>
+#include<string>
+using namespace std;
+string c1,c2,s1,s2,ans="0000";
+char a1,b1;
+int main()
+{
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cin>>c1>>s1>>c2>>s2;
+	a1=s1[2];
+	b1=s2[2];
+	for(int i=0;i<4;i++)
+	{
+		if(i==0) 
+			if(c1==c2) 
+			{
+				ans[0]='1';	
+				continue;
+			}
+			else
+			{
+				ans="0000";
+				break;
+			}
+		if(i==1)
+			if(s1[0]==s2[0]&&s1[1]==s2[1])
+			{
+				ans[i]='1';	
+				continue;
+			}
+			else
+			{
+				ans="1000";
+				break;
+			}
+		if(i==2)
+			if(a1!='D'&&b1!='F'&&a1!='F'&&b1!='D') 
+			{
+				ans[i]='1';
+			}
+			else
+			{
+				if((a1=='D'&&b1=='F')||(a1=='F'&&b1=='D'))
+				{
+					ans="1111";
+					break;
+				}
+				else
+				{
+					ans="1100";
+					break;
+				}
+			}
+		if(i==3)
+		{
+			if((a1=='A'&&b1=='C')||(a1=='C'&&b1=='A'))
+			{
+				ans[i]='0';
+			}
+			else
+			{
+				ans="1111";
+				break;
+			}
+		}	
+	}
+	cout<<ans;
+	return 0;
+} 

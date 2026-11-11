@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct person {
+	string a;
+	string b;
+};
+
+int main() {
+	freopen("travel.in", "r", stdin);
+	freopen("travel.out", "w", stdout);
+	person r, x;
+	cin >> r.a >> r.b >> x.a >> x.b;
+
+	if (r.a == x.a) {
+		cout << "1";
+
+		if (r.b[0] == x.b[0] && r.b[1] == x.b[1]) {
+			cout << "1";
+
+			if (x.b[2] <= 'C' && r.b[2] <= 'C') {
+				cout << "1";
+
+				if (r.b[2] == x.b[2] + 1 || r.b[2] == x.b[2] - 1)
+					cout << "1";
+				else
+					cout << "0";
+			} else if (r.b[2] >= 'D' && x.b[2] >= 'D')
+				cout << "11";
+			else
+				cout << "00";
+		} else
+			cout << "000";
+	} else
+		cout << "0000";
+	return 0;
+}

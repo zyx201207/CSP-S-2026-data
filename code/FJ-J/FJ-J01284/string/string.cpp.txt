@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+string r;
+int n,cnt=0;
+int main(){
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	cin>>r>>n;
+	for(int i=0;i<=n;i++)
+	{
+		r[i]=r[n];
+		if(r[i]>r[n])
+		{
+			r[n]+=1;
+			cnt++;
+		}
+	}
+	if(r[n]!=n)
+	{
+		cout<<r[n];
+	}
+	sort(r[i],r[i+1]-1); 
+	if(r[i]>=n)
+	{
+		while(r[i]<=r[i+1])
+		{
+			cnt++;
+		}
+	}
+	if(n==r[n])
+	{
+		cnt=0;
+		break;
+	}
+	cnt++;
+	while(cnt>n)
+	{
+		cnt+=1;
+		a[i]++;
+		cnt+=a[i];
+	}
+	cout<<cnt<<endl;	
+	return 0;
+}

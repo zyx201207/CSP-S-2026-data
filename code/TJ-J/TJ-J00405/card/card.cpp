@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("card.in","r",stdin);
+	freopen("card.out","w",stdout);
+	int n,m,a;
+	cin>>n>>m>>a;
+	cout<<n<<m;
+	fclose(stdin);
+	fclose(stdout);
+}

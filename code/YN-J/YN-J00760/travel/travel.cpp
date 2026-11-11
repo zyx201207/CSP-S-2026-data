@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+string c1, s1, c2, s2;
+
+int main() {
+	cin >> c1 >> s1 >> c2 >> s2;
+	int k;
+
+	if (c1  == c2) {
+		if (s1[0] == s2[0] && s2[1] == s1[1]) {
+			if (s1[2] > 'C' && s2[2] > 'C' || s1[2] <=  'C' && s2[2] <=  'C') {
+				k = int(s1[2] - s2[2]);
+
+				if (k == -1 || k == 1) {
+					cout << "1111";
+				} else
+					cout << "1110";
+			} else
+				cout << "1100";
+		} else
+			cout << "1000";
+	} else
+		cout << "0000";
+	return 0;
+}

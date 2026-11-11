@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int N=1e6+10;
+long long i,n,m,a[N],x,mb,l,r,mid,qzh[N],t[N],ii,bh[N],ks,js,ans,zans;
+int main(){
+	freopen("crystal.in","r",stdin);
+	freopen("crystal.out","w",stdout);
+    cin>>n>>m;
+    for(i=1;i<=n;i++){
+        scanf("%lld",&a[i]);
+    }
+    sort(a+1,a+n+1);
+    for(i=1;i<=n;i++){
+        qzh[i]=qzh[i-1]+a[i];
+    }
+    for(i=1;i<=n;i++){
+        if(a[i]!=a[i-1]){
+            ii++;
+            t[ii]=a[i];
+        }
+        bh[i]=ii;
+    }
+    i=1;
+    while(1){
+		if(i>n){
+			break;
+		}
+        ans=0;
+        ks=i;
+        if(((ks-1)-1+1)*a[i]-(qzh[ks-1]-qzh[1-1])<=m){
+			ans=ans+ks-1;
+		}
+		if(((ks-1)-1+1)*a[i]-(qzh[ks-1]-qzh[1-1])>=m+1){
+			l=1;
+			r=mid-1;
+			while(l<r){
+				mid=(l+r)/2;
+				if(-(((ks-1)-mid+1)*a[i]-(qzh[ks-1]-qzh[mid-1]))>-m){
+					r=mid;
+				}
+				else{
+					l=mid+1;
+				}
+			}
+			l--;
+			ans=ans+(ks-1)-(l+1)+1;
+		}
+        l=1;
+        r=n;
+        if(a[i]!=a[n]){
+            while(l<r){
+                mid=(l+r)/2;
+                if(a[mid]>=t[bh[i]+1]){
+                    r=mid;
+                }
+                else{
+                    l=mid+1;
+                }
+            }
+            js=l-1;
+        }
+        if(a[i]==a[n]){
+            js=n;
+        }
+        ans=ans+js-ks+1;
+        zans=max(zans,ans);
+        i=js+1;
+    }
+    cout<<zans;
+    return 0;
+}

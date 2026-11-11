@@ -1,0 +1,83 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+typedef string str;
+int main()
+{
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	string c1,s1,c2,s2,q={'0','0','0','0'};
+	cin>>c1>>s1>>c2>>s2;
+	if(c1==c2)
+	{
+		q[0]='1';
+	}
+	else
+	{
+		q[0]='0';
+	}
+	if(s1[0]==s2[0]&&s1[1]==s2[1]) 
+	{
+		q[1]='1';
+	}
+	else
+	{
+		q[1]='0';
+	}
+	if(s1[2]=='A'||s1[2]=='B'||s1[2]=='C')
+	{
+		if(s2[2]=='A'||s2[2]=='B'||s2[2]=='C')
+		{
+			q[2]='1';
+		}
+		else
+		{
+			q[2]='0';
+		}
+	}
+	else
+	{
+		if(s2[2]=='D'||s2[2]=='F')
+		{
+			q[2]='1';
+		}
+		else
+		{
+			q[2]='0';
+		}
+	}
+	if(s1[0]==s2[0]&&s2[1]==s1[1])
+	{
+        if(abs(int(s1[2]-'A')-int(s2[2]-'A'))<=1)
+        {
+        	q[3]='1';
+		}
+		else
+		{
+			q[3]='0';
+		}
+    }
+	else if(s1[0]==s2[0])
+	{
+		if((abs(int(s1[1]-'0')-int(s2[1]-'0'))<=1)&&s1[3]==s2[3])
+		{
+			q[3]='1';
+		}
+		else
+		{
+			q[3]='0';
+		}
+	}
+	else if(s1[0]!=s2[0]&&s2[1]!=s1[1])
+	{
+		if((s1[1]>='0'&&s1[1]<='1')&&(s2[1]=='0'||s2[1]=='1'))
+		{
+			q[3]='1';
+		}
+		else
+		{
+			q[3]='0';
+		}
+	}
+	cout<<q;
+}

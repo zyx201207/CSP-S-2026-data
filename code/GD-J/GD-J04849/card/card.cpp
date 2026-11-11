@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(){
+	
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	int a,b;
+	cin>>a>>b;
+	cout << 3<<' '<< 1<<' ' <<4; }

@@ -1,0 +1,26 @@
+#include "bits/stdc++.h"
+using namespace std;
+#define int long long
+signed main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cin.tie(0);cout.tie(0);
+	string c1,s1,c2,s2;
+	cin>>c1>>s1>>c2>>s2;
+	if(c1[0]==c2[0] && c1[1]==c2[1]){
+		cout<<1;
+		if(s1[0]==s2[0] && s1[1]==s2[1]){
+			cout<<1;
+			int z1=(int)(s1[2]-'A'+1),z2=(int)(s2[2]-'A'+1);
+			if((z1<=3 && z2<=3)||(z1>=4 && z2>=4)){
+				cout<<1;
+				z1=(int)(s1[2]-'A'+1),z2=(int)(s2[2]-'A'+1);
+				if(z1-z2==1 || z1-z2==-1)cout<<1;
+				else cout<<"0";
+			}
+			else cout<<"00";
+		}
+		else cout<<"000";
+	}
+	else cout<<"0000";
+}

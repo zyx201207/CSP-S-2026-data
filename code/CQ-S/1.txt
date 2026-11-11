@@ -1,0 +1,80 @@
+4,7c4,6
+< const int N=500+10,M=5e5+10,Q=1e5;
+< int c,n,m,d,q;
+< int k[N],w[M];
+< int a[M][21],t[M][21],b[M];
+---
+> int c, n, m, d, q, w[500010], k[510];
+> long long dis[510][510];
+> vector<pair<int, int>> edge[500010];
+9,10c8
+< int main()
+< {
+---
+> int main(){
+14,17c12,14
+< 	
+< 	for(int i=1;i<=m;i++) scanf("%d",&w[i]);
+< 	for(int i=1;i<=n;i++)
+< 	{
+---
+> 	for (int i = 1; i <= m; i++)
+> 		scanf ("%d", &w[i]);
+> 	for (int i = 1; i <= n; i++){
+19,23c16,19
+< 		for(int j=1;j<=(2*k[i]);j++) 
+< 		{
+< 			scanf("%d",&a[j][i]);
+< 			scanf("%d",&t[a[j][i]][i]);
+< 			b[a[j][i]]=i;
+---
+> 		for (int j = 1; j <= k[i]; j++){
+> 			int x, t;
+> 			scanf ("%d%d", &x, &t);
+> 			edge[x].push_back({m + i, t});
+26,31d21
+< 	int x,y;
+< 	for(int r=1;r<=q;r++) 
+< 	{
+< 		
+< 	scanf("%d%d",x,y);
+< 	int ans=0,dx=b[x],dy=b[y];
+33,36c23,33
+< 	{
+< 		for(int j=1;j<=(2*k[i]);j++)
+< 		{
+< 			
+---
+> 		for (int j = 1; j <= n; j++)
+> 			if (i != j)
+> 				dis[i][j] = 1LL << 60LL;
+> 	for (int i = 1; i <= m; i++){
+> 		int len = (int)edge[i].size();
+> 		for (int j = 0; j < len; j++){
+> 			int x = edge[i][j].first - m, z1 = edge[i][j].second;
+> 			for (int k = j + 1; k < len; k++){
+> 				int y = edge[i][k].first - m, z2 = edge[i][k].second;
+> 				dis[x][y] = min(dis[x][y], (long long)(z1 + z2));
+> 				dis[y][x] = dis[x][y];
+39c36,37
+< 	
+---
+> 	}
+> 	for (int k = 1; k <= n; k++)
+41,43c39,50
+< 	{
+< 		printf("%d\n",w[x]+w[y]+t[x][dx]+t[y][dy]+ans);
+< 	}}
+---
+> 			for (int j = 1; j <= n; j++)
+> 				if (dis[i][k] < 1LL << 60LL && dis[k][j] < 1LL << 60LL)
+> 					dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j]);
+> 	for (; q--; ){
+> 		int x, y;
+> 		scanf ("%d%d", &x, &y);
+> 		long long ans = 1LL << 60LL;
+> 		for (auto it : edge[x])
+> 			for (auto it2 : edge[y])
+> 				ans = min(ans, dis[it.first - m][it2.first - m] + it.second + it2.second);
+> 		printf ("%lld\n", w[x] + w[y] + ans);
+> 	}

@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	int n,m,a[1000],sum=0; 
+	cin >> n >> m;
+	for(int i=1;i<=n;i++){
+		cin >> a[i];
+	}
+	for(int i=1;i<=n;i++){
+		for(int j=0;j=m;j++){
+		    if(a[i]*a[i+1]%m!=0){
+		    	sum++; 
+			}	
+		}
+	}
+	cout << sum;
+	
+	return 0;
+}

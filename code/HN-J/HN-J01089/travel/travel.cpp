@@ -1,0 +1,90 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+
+{
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	long long a1=0,a2=0,x=0,y=0,z=0,k=0;
+	string b1,b2;
+	cin>>a1>>b1>>a2>>b2;
+	if(a1==a2)
+	{
+		x=1;
+	}
+	else
+	{
+		x=0;
+	}
+	if(x==0)
+	{
+		y=0;
+	}
+	else
+	{
+		if(b1[0]==b2[0]&&b1[1]==b2[1])
+		{
+			y=1;
+		}
+		else
+		{
+			y=0;
+		}
+	}
+	if(y==0)
+	{
+		z=0;
+	}
+	else
+	{
+		if(b1[2]-b2[2]==-1||b1[2]-b2[2]==1)
+		{
+			if(b1[2]+b2[2]==135)
+			{
+				z=0;
+			}
+			else
+			{
+				z=1;
+			}
+		}
+		else
+		{
+			z=0;
+		}
+	}
+	if(b1[2]=='A'&&b2[2]=='C')
+	{
+		z=1;
+	}
+	if(b1[2]=='C'&&b2[2]=='A')
+	{
+		z=1;
+	}
+	if(z==0)
+	{
+		k=0;
+	}
+	else
+	{
+		if(b1[2]-b2[2]==-1||b1[2]-b2[2]==1)
+		{
+			if(b1[2]+b2[2]==135)
+			{
+				k=0;
+			}
+			else
+			{
+				k=1;
+			}
+		}
+	}
+	if(b1[2]+b2[2]==138)
+	{
+		k=1;
+	}
+	cout<<x<<y<<z<<k;
+	return 0;
+}
+

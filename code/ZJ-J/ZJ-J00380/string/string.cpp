@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+#define IOS ios::sync_with_stdio(0);cin.tie(0);cout.tie(0)
+#define int long long
+using namespace std;
+const int INF=2e18,N=2e5+10;
+char c[N];
+int n,a[N],ans; 
+signed main(){
+	IOS;
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+ 	cin>>n;
+ 	for(int i=1;i<=n;i++){
+ 		cin>>a[i]>>c[i];
+	}
+	int l=1,r=n;
+	while(l<r){
+		if(c[l]!=c[r]){
+			if(a[l]==a[r]){
+				ans+=a[l];
+				l++;
+				r--;
+			}
+			else if(a[l]>a[r]){
+				ans+=a[r];
+				a[l]-=a[r];
+				r--;
+			}
+			else{
+				ans+=a[l];
+				a[r]-=a[l];
+				l++;
+			}
+		}
+		else{
+			if(a[l]==a[r]){
+				l++;
+				r--;
+			}
+			else if(a[l]>a[r]){
+				a[l]-=a[r];
+				r--;
+			}
+			else{
+				a[r]-=a[l];
+				l++;
+			}
+		}
+	}
+	cout<<ans;
+	return 0;
+} 

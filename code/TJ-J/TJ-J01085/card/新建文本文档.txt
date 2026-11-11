@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int n,m;
+	//freopen("string.in","r"stdin);
+	//freopen("string.our","w"stdout);
+	for(int i;i<=n;i++){
+		cin>>a[i];
+	}
+	stact<int> k;
+	for(int i; i<=n;i++){
+		int h=0;
+		for(int j;j<=n;j++)}
+			for(int z=0;z<=j;z++){
+			if(b[f]==a[j-1]){
+			in			for(int y=5;y>=1;y++){
+				k.pop();
+					b[f]=0;
+				break;
+			}
+			k.pop();
+			b[f]=0;
+			f++;
+			}
+		}
+	}
+	}
+	b[h]=a[j-1];
+	k.push(b[h]);
+	
+	return 0;
+}
+
+
+

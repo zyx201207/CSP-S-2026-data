@@ -1,0 +1,98 @@
+#include<bits/stdc++.h> 
+using namespace std;
+int main(){
+	freopen("travel.in", "r", stdin);
+	freopen("travel.out", "w", stdout);
+	string c,s,c1,s1;
+	int t=0,q=0,w=0;
+	cin>>c>>s>>c1>>s1;
+	if(c==c1){
+		cout<<"1"; 
+	}else{
+		t++;
+		q+=100;
+		w+=100;
+		cout<<"0000";
+	}
+       if(t==0){
+		if(s[0]==s1[0]&&s[1]==s1[1]){
+			cout<<"1";
+		}else{
+			q++;
+			w+=20;
+			cout<<"000";
+		}	
+	}
+	if(q==0){
+		  if(s[2]=='A'){
+		  	if(s1[2]=='B'||s1[2]=='C'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='B'){
+		  	if(s1[2]=='A'||s1[2]=='C'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='C'){
+		  	if(s1[2]=='B'||s1[2]=='A'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='F'){
+		  	if(s1[2]=='D'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='D'){
+		  	if(s1[2]=='F'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		}
+		if(w==0){
+		cout<<"00";
+    
+}
+if(w==1){
+	if(s[2]=='A'){
+		  	if(s1[2]=='B'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='B'){
+		  	if(s1[2]=='A'||s1[2]=='C'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='C'){
+		  	if(s1[2]=='B'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='F'){
+		  	if(s1[2]=='D'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+		  if(s[2]=='D'){
+		  	if(s1[2]=='F'){
+		  		w++;
+		  		cout<<"1";
+			  }
+		  }
+}
+if(w==1){
+	cout<<"0";
+}
+	return 0;
+}

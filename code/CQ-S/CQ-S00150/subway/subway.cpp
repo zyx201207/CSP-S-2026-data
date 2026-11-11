@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main(){
+	freopen("subway.in","r",stdin);
+	freopen("subway.out","w",stdout);
+	int n,m;
+	cin>>n>>m;
+	cout<<n-1;
+	return 0;
+}
+

@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<algorithm>
+#include<string>
+#include<cstring>
+using namespace std;
+typedef long long LL;
+int c,n,m,d,q;
+int w[2500010];
+int main()
+{
+    freopen("subway.in","r",stdin);
+    freopen("subway.out","w",stdout);
+    ios::sync_with_stdio( 0 );
+    cin.tie( 0 );
+    cin >> c >> n >> m >> d >> q;
+    for ( int i = 1;i <= m;i++ )
+    {
+		cin >> w[i];
+	}
+	
+    return 0;
+}
+

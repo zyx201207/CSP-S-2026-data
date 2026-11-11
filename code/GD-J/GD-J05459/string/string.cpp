@@ -1,0 +1,3 @@
+#include<iostream>
+using namespace std;
+struct letter{long long l;string s;};letter a[200010];int n;long long cal(){long long l = 1,r = n,ans = 0;letter lm={0,""},rm={0,""};while(l <= r){if(rm.l > 0){a[l].l -= rm.l;ans +=  (rm.s != a[l].s) * rm.l;rm = {0,""};}if(lm.l > 0){a[r].l -= lm.l;ans +=  (lm.s != a[r].s) * lm.l;lm = {0,""};}if(a[l].l != a[r].l){if(a[l].l > a[r].l)lm = {a[l].l - a[r].l,a[l].s};elserm = {a[r].l - a[l].l,a[r].s};}ans += (!(a[l].s == a[r].s)) * a[l].l;l++,r--;}return ans;}int main(){cin >> n;for(long long i = 1;i <= n;i++){cin >> a[i].l >> a[i].s;}long long ans = 0;ans = cal();cout << ans << endl;return 0;}

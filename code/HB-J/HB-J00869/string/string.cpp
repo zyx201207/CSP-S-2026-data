@@ -1,0 +1,154 @@
+#include<bits/stdc++.h>
+using namespace std;
+string c[1000000000];
+long long n,a[100000000],sum=0;
+void ac(long long qq)
+{
+    string p;
+    for(int i=0;i<n;i++)
+    {
+        while(a[i]>0)
+        {
+            p+=n[i];
+            a[i]--;
+        }
+    }
+    long long b[28]={0};
+    for(int i=0;i<qq)
+    {
+        while(qq--)
+        {
+            if(p[i]=='a')
+            {
+                b[0]++;
+            }
+            if(p[i]=='b')
+            {
+                b[1]++;
+            }
+            if(p[i]=='c')
+            {
+                b[2]++;
+            }
+            if(p[i]=='d')
+            {
+                b[3]++;
+            }
+            if(p[i]=='e')
+            {
+                b[4]++;
+            }
+            if(p[i]=='f')
+            {
+                b[5]++;
+            }
+            if(p[i]=='g')
+            {
+                b[6]++;
+            }
+            if(p[i]=='h')
+            {
+                b[7]++;
+            }
+            if(p[i]=='i')
+            {
+                b[8]++;
+            }
+            if(p[i]=='j')
+            {
+                b[9]++;
+            }
+            if(p[i]=='k')
+            {
+                b[10]++;
+            }
+            if(p[i]=='l')
+            {
+                b[11]++;
+            }
+            if(p[i]=='m')
+            {
+                b[12]++;
+            }
+            if(p[i]=='n')
+            {
+                b[13]++;
+            }
+            if(p[i]=='o')
+            {
+                b[14]++;
+            }
+            if(p[i]=='p')
+            {
+                b[15]++;
+            }
+            if(p[i]=='q')
+            {
+                b[16]++;
+            }
+            if(p[i]=='r')
+            {
+                b[17]++;
+            }
+            if(p[i]=='s')
+            {
+                b[18]++;
+            }
+            if(p[i]=='t')
+            {
+                b[19]++;
+            }
+            if(p[i]=='u')
+            {
+                b[20]++;
+            }
+            if(p[i]=='v')
+            {
+                b[21]++;
+            }
+            if(p[i]=='w')
+            {
+                b[22]++;
+            }
+            if(p[i]=='x')
+            {
+                b[23]++;
+            }
+            if(p[i]=='y')
+            {
+                b[24]++;
+            }
+            if(p[i]=='z')
+            {
+                b[25]++;
+            }
+        }
+    }
+    sort(b,b+n);
+    qq-=b[0];
+    return qq;
+}
+
+int main()
+{
+    freopen("string.in","r",stdin);
+    freopen("string.out","w",stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i]>>c[i];
+        sum+=a[i];
+    }
+    if(sum%2==1)
+    {
+        sum-=1;
+        ac(sum);
+    }
+    else
+    {
+        ac(sum);
+    }
+    return 0;
+}

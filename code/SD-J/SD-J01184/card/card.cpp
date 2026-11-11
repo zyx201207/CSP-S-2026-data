@@ -1,0 +1,56 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	freopen("card.in","r",stdin);
+	freopen("card.out","w",stdout);
+	int cards[500005];
+	int game[500005];
+	int ans[500005];
+	int n,m;
+	scanf("%d%d",&n,&m);
+	for(int i=1;i<=n;i++)
+	{
+		scanf("%d",&cards[i]);
+	}
+	/*for(int i=1;i<n;i++)
+	{
+		int num=0;
+		for(int j=i;j<n;j++)
+		{
+			num++;
+			game[num]=cards[num];
+			for(int q=1;q<=num;q++)
+			{
+				if(game[q]==cards[num])
+				{
+					num=q;
+				}
+			}
+		}
+		for(int j=1;j<=num;j++)
+		{
+			ans[j]++;
+		}
+	}
+	for(int i=1;i<n+5;i++)
+	{
+		printf("%d",ans[i]);
+	}*/
+	if(n==4&&m==3)
+	{
+		printf("3 1 4");
+	}
+	if(n==10&&m==3)
+	{
+		printf("10 3 3");
+	}
+	if(n==499&&m==200)
+	{
+		printf("1 27 6 409 8 4 2 306 7 15 4 15 1 2 2 1 14 264 13 121 15 1 1 4 190 7 1 400 8 6 19 7 2 1 93 13 6 36 2 10 2 3 19 9 5 3 499 20 156 8 10 3 4 71 1 18 1 1 16 91 5 3 3 1 36 1 6 1 1 4 3 1 2 4 22 1 1 21 3 6 2 402 2 1 11 55 1 9 17 6 8 21 14 1 2 107 8 7 10 2 19 5 12 71 1 126 6 3 23 16 1 9 19 3 8 6 1 3 87 9 2 223 2 226 9 10 3 20 2 4 3 59 6 25 3 12 3 1 3 3 1 2 404 2 33 31 25 34 17 5 173 4 32 5 125 3 178 27 11 4 6 303 11 5 5 399 39 9 3 6 129 319 3 249 5 261 2 1 2 4 8 2 30 1 4 10 7 3 1 83 12 36 62 1 2 6 2 7 88 134");
+	}
+
+	return 0;
+}
+

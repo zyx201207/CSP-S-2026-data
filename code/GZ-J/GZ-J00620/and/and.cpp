@@ -1,0 +1,17 @@
+//GZ-J00620 ¹ùå°Ðù 
+#include<bits/stdc++.h>
+using namespace std;
+priority_queue<long long> q;
+int main(){
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	int n,m;
+	cin>>n>>m;
+	vector<long long> a(n);
+	for(int i=1;i<=n;i++){
+		cin>>a[i];
+		q.push(a[i]);
+	}
+	if(m==1) cout<<q.top();
+	return 0;
+}

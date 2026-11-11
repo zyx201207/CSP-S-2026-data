@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+#include<cstdio>
+using namespace std;
+int n,m,a[200001];
+int main(){
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	cin>>n>>m;
+	for(int i=0;i<n;i++){
+		cin>>a[i];
+	}
+	
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
+}

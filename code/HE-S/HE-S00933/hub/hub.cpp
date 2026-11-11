@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+//	freopen("hub.in","r",stdin);
+//	freopen("hub.out","w",stdout);
+	int a,b;
+	int c,d;
+	int e,f;
+	int g,h;
+	int i,j;
+	int k,l;
+	int m,n;
+	int o,p;
+	int q,r;
+	int s,t;
+	int u,v;
+	int w,x;
+	int y,z;
+	int a1,a2;
+	int a3,a4;
+	int a5,a6;
+	cin>>a>>b;
+	cin>>c>>d;
+	cin>>e>>f;
+	cin>>g>>h;
+	cin>>i>>j;
+	cin>>k>>l;
+	cin>>m>>n;
+	cin>>o>>p;
+	cin>>q>>r;
+	cin>>s>>t;
+	cin>>u>>v;
+	cin>>w>>x;
+	cin>>y>>z;
+	cin>>a1>>a2;
+	cin>>a3>>a4;
+	cin>>a5>>a6;
+	cout<<"1"<<endl<<"2";
+	return 0;
+}

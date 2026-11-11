@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define endl '\n'
+#define ll long long
+
+int t[ ( int )5e5 + 5 ];
+int dist[ ( int )5e5 + 5 ];
+bool vis[ ( int )5e5 + 5 ];
+struct node {
+	int a, t;
+};
+vector<node> g[ ( int )5e5 + 5 ];
+int c, n, m, d, q;
+
+void dij( int x ) {
+	memset( dist, 0x3f, sizeof dist );
+	dist[ x ] = 0;
+	vis[ x ] = true;
+	priority_queue<int, vector<int>, greater<int>> q;
+	q.push( x );
+	while ( q.size() ) {
+		int v{ q.top() };
+		q.pop();
+		if ( vis[ v ] ) continue;
+		vis[ v ] = true;
+		for ( node u: g[ v ] ) {
+			if ( dist[ u.a ] > dist[ v ] + u.t ) {
+				dist[ u.a ] = dist[ v ] + u.t;
+				q.push( u.a );
+			}
+		}
+	}
+	memset( vis, false, sizeof vis );
+}
+
+int main() {
+	freopen( "migrate.in", "r", stdin );
+	freopen( "migrate.out", "w", stdout );
+	ios::sync_with_stdio( false );
+	cin.tie( nullptr );
+	int c, t;
+	cin >> c >> t;
+	while ( t -- ) cout << 0 << endl;
+	return 0;
+} 

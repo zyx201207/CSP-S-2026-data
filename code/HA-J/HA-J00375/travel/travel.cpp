@@ -1,0 +1,71 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	string s,s1,d,d1;
+	cin>>s>>s1>>d>>d1;
+	bool f=0;
+	if(s==d)
+	{
+		cout<<'1';
+		f=1;
+	}else
+	{
+		cout<<'0';
+	}
+	if(f==1)
+	{
+		f=0;
+		if(s1[0]==d1[0]&&s1[1]==d1[1])
+		{
+			cout<<'1';
+			f=1;
+		}else
+		{
+			cout<<'0';
+		}
+	}else
+	{
+		cout<<'0';
+	}
+	if(f==1)
+	{
+		f=0;
+		if(s1[2]=='F'||s1[2]=='D')
+		{
+			if(d1[2]=='A'||d1[2]=='B'||d1[2]=='C')
+			{
+				cout<<'0';
+			}
+		}else if(d1[2]=='F'||d1[2]=='D')
+		{
+			if(s1[2]=='A'||s1[2]=='B'||s1[2]=='C')
+			{
+				cout<<'0';
+			}
+		}else
+		{
+			cout<<'1';
+			f=1;
+		}
+	}else
+	{
+		cout<<0;
+	}
+	if(f==1)
+	{
+		if(s1[2]=='F'&&d1[2]=='D'||s1[2]=='D'&&d1[2]=='F'||s1[2]=='A'&&d1[2]=='B'||s1[2]=='B'&&d1[2]=='A'||s1[2]=='B'&&d1[2]=='C'||s1[2]=='C'&&d1[2]=='B')
+		{
+			cout<<'1';
+		}else
+		{
+			cout<<'0';
+		}
+	}else
+	{
+		cout<<'0';
+	}
+	return 0;
+} 

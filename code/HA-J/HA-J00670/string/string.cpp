@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long a[200010];
+char c[200010];
+int main()
+{
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	long long n,i,l,r,ans=0,o;
+	cin>>n;
+	for(i=1;i<=n;i++)
+		cin>>a[i]>>c[i];
+	l=1;
+	r=n;
+	while(l<r)
+	{
+		if(c[l]!=c[r])
+		{
+			o=0;
+			if(a[l]>a[r]&&o==0)
+			{
+				ans+=a[r];
+				a[l]-=a[r];
+				r--;
+				o=1;
+			}
+			if(a[l]<a[r]&&o==0)
+			{
+				ans+=a[l];
+				a[r]-=a[l];
+				l++;
+				o=1;
+			}
+			if(a[l]==a[r]&&o==0)
+			{
+				ans+=a[l];
+				l++;
+				r--;
+				o=1;
+			}
+		}
+		else
+		{
+			o=0;
+			if(a[l]>a[r]&&o==0)
+			{
+				a[l]-=a[r];
+				r--;
+				o=1;
+			}
+			if(a[l]<a[r]&&o==0)
+			{
+				a[r]-=a[l];
+				l++;
+				o=1;
+			}
+			if(a[l]==a[r]&&o==0)
+			{
+				l++;
+				r--;
+				o=1;
+			}
+		}
+	}
+	cout<<ans;
+}

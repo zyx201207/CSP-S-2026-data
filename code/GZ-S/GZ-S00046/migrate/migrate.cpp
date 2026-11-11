@@ -1,0 +1,16 @@
+//GZ-S00046 毕节东辰实验学校 漆高唤
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
+	freopen(".in","r",stdin);
+	freopen(".out","w",stdout);
+	
+	return 0;
+}

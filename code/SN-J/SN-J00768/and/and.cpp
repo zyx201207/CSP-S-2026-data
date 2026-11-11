@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int a,b,c,d;
+int m;
+int main(){
+	freopen("and.in","r","stdin");
+	freopen("and.out","w","stdout");
+
+
+
+
+retrun 0;
+}

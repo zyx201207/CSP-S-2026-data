@@ -1,0 +1,10 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+ll i, j, k, n, m;
+int main(){
+	freopen("hub.in", "r", stdin);
+	freopen("hub.out", "w", stdout);
+	printf("0");
+	return 0;
+}

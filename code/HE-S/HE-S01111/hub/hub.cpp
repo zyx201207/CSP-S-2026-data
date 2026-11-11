@@ -1,0 +1,19 @@
+#include<bits/stdc++.h> 
+using namespace std;
+
+int c,t,n,k,u[1000005],v[1000005],ans[25];
+
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	scanf("%d %d",&t,&c);
+for(int i=0;i<c;i++){
+	scanf("%d %d",&n,&k);
+	for(int i=0;i<n;i++){
+		cin>>u[i]>>v[i];
+	}
+	
+	ans[i]=1;
+}
+	for(int i=0;i<c;i++)cout<<ans[i]<<endl; 
+}

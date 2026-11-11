@@ -1,0 +1,3 @@
+#include <bits/stdc++.h>
+using namespace std;using ll=long long;ll a[500005];bool cmp(ll x,ll y){return x>y;}
+int main(){ios::sync_with_stdio(0); cin.tie(0);freopen("crystal.in","r",stdin);freopen("crystal.out","w",stdout);ll n,m,fl=1;cin>>n>>m;for(ll i=1;i<=n;i++){cin>>a[i];if(i>2){if(a[i]-a[i-1]!=a[i-1]-a[i-2])fl=0;}}sort(a+1,a+n+1,cmp);ll p=0;for(ll i=1;i<n;i++){ll m1=m,j=i+1;for(j=i+1;j<=n;j++){m1-=(a[i]-a[j]);if(m1<=0||j==n){if(m1<0)j--;break;}}p=max(p,j-i+1);if(fl==1&&i>3)break;}cout<<p<<"\n";return 0;}

@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+constexpr long long N=1e5,M=1e5,W=1e18;
+long long n,m;
+int main()
+{
+//	freopen("hub.in","r",stdin);
+//	freopen("hub.out","w",stdout);
+	
+	ios::sync_with_stdio(0);
+	cin.tie(nullptr);
+	
+	return 0;
+}

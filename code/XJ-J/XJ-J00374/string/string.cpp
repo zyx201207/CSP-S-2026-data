@@ -1,0 +1,12 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	long long n;
+	cin>>n;
+	for(int i=1;i<=i+1;i++){
+		cout<<i;
+	}
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	return 0;
+}

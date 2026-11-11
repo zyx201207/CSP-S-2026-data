@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a,b;
+int main()
+{
+    freopen("hub.in","r",stdin);
+    freopen("hub.ans","w",stdout);
+    freopen("hub.out","w",stdout);
+    cin>>a>>b;
+    for(int i=1;i<b;i++)
+    cout<<rand()%4+1<<endl;
+    cout<<rand()%4+1;
+    return 0;
+}

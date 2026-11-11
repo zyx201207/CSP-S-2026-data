@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	int a,b;
+	cin>>a>>b;
+	sort(z+1;z+a+1;cmp);
+	cout<<z[1].a;
+	return 0;
+}

@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+#define int long long
+using namespace std;
+int c,t,n,k,num;
+signed main(){
+    freopen("hub.in","r",stdin);
+    freopen("hub.out","w",stdout);
+    cin>>c>>t;
+    for(int i=1;i<=t;i++){
+        cin>>n>>k;
+        for(int i=1;i<n;i++){
+            cin>>k>>num;
+        }
+    }
+    for(int i=1;i<=t;i++){
+        cout<<"1"<<endl;
+    }
+    return 0;
+}

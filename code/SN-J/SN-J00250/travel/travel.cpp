@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	string c1,s1,c2,s2;
+	cin>>c1>>s1>>c2>>s2;
+	int flost=0,cnt=0,sum=0,num=0;
+	if(c1==c2)
+	{
+		flost=1;
+	} 
+	cout<<flost<<cnt<<sum<<num;
+	return 0;
+}

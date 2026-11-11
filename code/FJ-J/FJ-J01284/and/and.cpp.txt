@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+int n,m,cnt=0;
+string r[100005]={};
+int main(){
+	freopen("and.in","r",stdin);
+	freopen("and.out","w",stdout);
+	cin>>n>>m;
+	cin>>r;
+	for(int i=1;i<=n;i++)
+	{
+		r[i]++;
+		for(j=1;j<=m;j++)
+		{
+			j[i]+=cnt;
+			if(and(m,m+1))
+			{
+				cnt+=m;
+			}
+		}
+	}
+	fot(int i=1;i<=n;i++)
+	{
+		 a[i]+=m;
+		 cnt++;
+		 if(a[m]>m)
+		 {
+		 	a[m]=a[m+1];
+		 }
+	}
+	for(i<=1;i<n;i++)
+	{
+		if(r[m]>r[m+1])
+		{
+			r[m+1]=r[m];
+			r[m]=m;
+		}
+	}
+	if(r[m]>m)
+	{
+		m++;
+		while(r[m]<=n){
+			m+=n;
+		}
+	}
+	cout<<m<<endl;
+	return 0;
+}

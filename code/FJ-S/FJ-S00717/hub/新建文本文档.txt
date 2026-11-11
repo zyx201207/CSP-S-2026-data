@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int n[10],k[10];
+int u[1000005];
+int v[1000005];
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	int c,t;
+	cin>>c>>t;
+	for(int i=1;i<=t;i++){
+		cin>>n[i]>>k[i];
+		for(int i=1;i<=n[i]-1;i++){
+			cin>>u[i]>>v[i];
+		}
+	}
+	int ans=0;
+	for(int i=1;i<=t;i++){
+		for(int i=1;i<=n[i]-1;i++){
+			if(v[i]-u[i]<10){
+				ans++;
+			}
+			else{
+				ans+=v[i]-u[i];
+			}
+			cout<<ans<<endl;
+		}
+	}
+	return 0;
+}

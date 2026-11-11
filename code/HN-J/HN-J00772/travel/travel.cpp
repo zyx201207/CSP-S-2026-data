@@ -1,0 +1,2 @@
+#include<bits/stdc++.h>
+using namespace std;int main(){freopen("travel.in","r",stdin);freopen("travel.out","w",stdout);string q,w,e,r;cin>>q>>w>>e>>r;if(q==e){cout<<1;if(w[0]==r[0]&&w[1]==r[1]){cout<<1;if(w[2]<68&&r[2]<68||w[2]>67&&r[2]>67){cout<<1;cout<<(w[2]==65&&r[2]==66||w[2]==66&&r[2]==65||w[2]==66&&r[2]==67||w[2]==67&&r[2]==66||w[2]==68&&r[2]==70||w[2]==70&&r[2]==68);}else cout<<"00";}else cout<<"000";}else cout<<"0000";return 0;}

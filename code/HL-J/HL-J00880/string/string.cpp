@@ -1,0 +1,61 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	long long n,i,a[200010],s=0,s1=0,w,u;
+	char b[200010];
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		cin>>a[i]>>b[i];
+	}
+	if(n%2==0)
+	w=n/2;
+	else
+	w=n/2+1;
+	for(i=1;i<=w;i++)
+	{
+		if(s!=0)
+		{
+			if(u==b[i])
+			a[i]-=s;
+			else
+			{
+				if(u==b[n-i+1])
+				a[n-i+1]-=s;
+				else
+				{
+					s1+=s;
+					a[i]-=s;
+				}
+			}
+		}
+		if(b[i]==b[n-i+1])
+		{
+			if(a[i]>a[n-i+1])	
+			s=a[i]-a[n-i+1];
+			else
+			s=a[n-i+1]-a[i];
+			u=a[i];
+		}
+		else
+		{
+			if(a[i]>a[n-i+1])
+			{
+				s1+=a[n-i+1];
+				s=a[i]-a[n-i+1];
+				u=a[i];	
+			}
+			else
+			{
+				s1+=a[i];
+				s=a[n-i+1]-a[i];
+				u=a[n-i+1];
+			}
+		}
+	}
+	cout<<s1;
+	return 0;
+}

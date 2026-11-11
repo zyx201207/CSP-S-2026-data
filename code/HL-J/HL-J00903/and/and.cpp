@@ -1,0 +1,4 @@
+#
+using namessid:
+	int namespaceint
+	

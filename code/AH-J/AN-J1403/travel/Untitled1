@@ -1,0 +1,18 @@
+#include <bits/stdc++.h
+using namespace std;
+int main()
+{
+    freopen("candy.in","r"stgin);
+    freopen("candy.our","w"stgin);
+    int n,L,R;
+    cin>>n>>L>>R;
+    if(L/n!=R/n)
+    {
+        cout<<n-1;
+        }
+        else
+        {
+        cout<<R%n;
+        }
+        reruno;
+        }

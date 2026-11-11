@@ -1,0 +1,54 @@
+include<bits/stdc++.h>
+using namespace std;
+int n,m,cnt=0;
+char a[10005]={};
+int main(){
+	freopen("card.in","r",stdin);
+	freopen("card.out","w",stdout);
+	cin>>n>>m;
+	cin>>a[n];
+	if(n<=5,m<=20)
+	{
+		for(int i<=5;i<=m;i++)
+		{
+			 a[i]=+=n;
+			 cnt++;
+			 i=i-1;
+			 cnt+=i;
+		}
+	}
+	for(int i=1;i<=n,;i++)
+	{
+		if(a[i]=n)
+		{
+		a[i]+=a[i+1];
+		}
+		if(n<=a[i])
+		{
+			a[i]+=a[i+n];
+			cnt++;
+		}
+	} 
+	if(a[i]==m)
+	{
+		cnt++;
+		break;
+	}
+	while(a[i]>=m)
+	{
+		cnt--;
+		if(a[i]==1)
+		{
+			break;
+		}
+	}
+	sort(a[i],a[i-1]);
+	cnt+=n;
+	for(int i=1;i<=n;i++)
+	{
+		a[i]+=a[i]+1;
+		cnt++;
+	}
+	cout<<cnt<<endl;
+	return 0;
+}

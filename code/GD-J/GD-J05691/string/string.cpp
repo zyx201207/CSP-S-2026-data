@@ -1,0 +1,152 @@
+#include<iostream>
+#include<string>
+#include<cstdio>
+#include<vector>
+using namespace std;
+int main()
+{
+	freopen("string.in","r",stdin);
+	freopen("string.out","w",stdout);
+	int n,b=0,d=0;
+	long long ans=0;
+	cin>>n;
+	vector<int> a(n+1);
+	vector<char>c(n+1);
+	for(int i=0;i<n;i++)
+	{
+		cin>>a[i]>>c[i];
+	}
+	for(int i=0,j=n-1;i<j;)//double
+	{
+		if(b>0)
+		{
+			if(c[i-1]!=c[j])
+			{
+				if(b>a[j])
+				{
+					ans+=a[j];
+					b-=a[j];
+					j--;
+					continue;
+				}
+				else if(b<a[j])
+				{
+					ans+=b;
+					d=a[j]-b;
+					b=0;
+					j--;
+					continue;
+				}
+				else
+				{
+					ans+=b;
+					b=0;
+					j--;
+					continue;
+				}
+			}
+			else
+			{
+				if(b>a[j])
+				{
+					b-=a[j];
+					j--;
+					continue;
+				}
+				else if(b<a[j])
+				{
+					d=a[j]-b;
+					b=0;
+					j--;
+					continue;
+				}
+				else
+				{
+					b=0;
+					j--;
+					continue;
+				}
+			}
+		}
+		else if(d>0)
+		{
+			if(c[i]!=c[j+1])
+			{
+				if(d>a[i])
+				{
+					ans+=a[i];
+					d-=a[i];
+					i++;
+					continue;
+				}
+				else if(d<a[i])
+				{
+					ans+=d;
+					b=a[i]-d;
+					d=0;
+					i++;
+					continue;
+				}
+				else
+				{
+					ans+=d;
+					d=0;
+					i++;
+					continue;
+				}
+			}
+			else
+			{
+				if(d>a[i])
+				{
+					d-=a[i];
+					i++;
+					continue;
+				}
+				else if(d<a[i])
+				{
+					b=a[i]-d;
+					d=0;
+					i++;
+					continue;
+				}
+				else
+				{
+					d=0;
+					i++;
+					continue;
+				}
+			}
+		}
+		if(b==d)
+		{
+			if(a[i]==a[j])
+			{
+				if(c[i]!=c[j])ans+=a[i];
+				i++,j--;
+				continue;
+			}
+			if(a[i]>a[j])
+			{
+				if(c[i]!=c[j])
+				{
+					ans+=a[j];
+				}
+				b=a[i]-a[j];
+				j--;
+				continue;
+			}
+			if(a[i]<a[j])
+			{
+				if(c[i]!=c[j])
+				{
+					ans+=a[i];
+				}
+				d=a[j]-a[i];
+				i++;
+				continue;
+			}
+		}
+	}
+	cout<<ans/2;
+}

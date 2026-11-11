@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	int cr,cx,a=0,b=0,c=0,d=0;
+	string sr,sx;
+	cin>>cr>>sr>>cx>>sx;
+	if(cr==cx)
+	{
+		a=1;
+		if(sr[0]==sx[0]&&sr[1]==sx[1])
+		{
+			b=1;
+			if(sr[2]=='A')
+			{
+				if(sx[2]=='B')
+				{
+					c=1;
+					d=1;
+				}
+				if(sx[2]=='C')
+				{
+					c=1;
+				}
+			}
+			if(sr[2]=='B'){
+				if(sx[2]=='A'||sx[2]=='C')
+				{
+					c=1;
+					d=1;
+				}
+			}
+			if(sr[2]=='C'){
+				if(sx[2]=='B')
+				{
+					c=1;
+					d=1;
+				}
+				if(sx[2]=='A')
+				{
+					c=1;
+				}
+			}
+			if(sr[2]=='D'){
+				if(sx[2]=='F')
+				{
+					c=1;
+					d=1;
+				}
+			}
+			if(sr[2]=='F'){
+				if(sx[2]=='D')
+				{
+					c=1;
+					d=1;
+				}
+			}
+		}
+	}
+	cout<<a<<b<<c<<d;
+	return 0;
+} 

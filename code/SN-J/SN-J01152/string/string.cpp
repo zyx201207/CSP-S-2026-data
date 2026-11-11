@@ -1,0 +1,9 @@
+include <bits/c++.h>
+using namespace std;
+int main(){
+	freopen("string.in","r","stdin");
+	freopen("string.out","w","stdout");
+		freclose("and.in");
+		freclose("and.out");
+	return 0;
+}

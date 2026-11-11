@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using ll=long long;
+using namespace std;
+
+string x1,x2,y1,y2;
+
+map<char,int> mp;
+
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
+	freopen("travel.in","r",stdin);
+	freopen("travel.out","w",stdout);
+	cin>>x1>>x2>>y1>>y2;
+	mp['A']=mp['B']=mp['C']=1;
+	if(x1==y1)cout<<1;
+	else
+	{
+		cout<<"0000";
+		return 0;
+	}
+	if(x2[0]==y2[0]&&x2[1]==y2[1])cout<<1;
+	else
+	{
+		cout<<"000";
+		return 0;
+	}
+	if(mp[x2[2]]==mp[y2[2]])cout<<1;
+	else 
+	{
+		cout<<"00";
+		return 0;
+	}
+	if((x2[2]=='A'&&y2[2]=='B')||(x2[2]=='B'&&y2[2]=='C')||(x2[2]=='D'&&y2[2]=='E')||(x2[2]=='B'&&y2[2]=='A')||(x2[2]=='C'&&y2[2]=='B')||(x2[2]=='E'&&y2[2]=='D'))cout<<1;
+	else cout<<0;
+	return 0;
+}

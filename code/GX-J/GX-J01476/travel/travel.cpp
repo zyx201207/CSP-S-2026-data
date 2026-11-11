@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    freopen("travel.in","r",stdin);
+    freopen("travel.out","w",stdout);
+	string a,b,c,d;
+	cin>>a>>b>>c>>d;
+	if(a==c){
+		cout<<"1";
+		if(b[0]==d[0]&&b[1]==d[1]){
+			cout<<"1";
+			if(b[2]<'d'&&d[2]<'d'){
+				cout<<"1";
+				if(b[2]-c[2]==1||c[2]-b[2]==1){
+				cout<<"1";
+			}
+			if(b[2]-c[2]>1||c[2]-b[2]>1){
+				cout<<"0";
+			}
+		}
+			if(d[2]>'c'&&b[2]>'c'){
+				cout<<"1";
+				if(b[2]-c[2]==1||c[2]-b[2]==1){
+				cout<<"1";
+			}
+			if(b[2]-c[2]>1||c[2]-b[2]>1){
+				cout<<"0";
+			}
+			}
+			if(b[2]<'d'&&c[2]>'c'){
+			cout<<"0"<<"0";
+			}
+			if(b[2]>'c'&&c[2]<'d'){
+			cout<<"0"<<"0";
+			}
+		if(b[0]==d[0]&&b[1]!=d[1]){
+			cout<<"0"<<"0"<<"0";
+		}
+		if(b[0]!=d[0]&&b[1]==d[1]){
+			cout<<"0"<<"0"<<"0";
+		}
+		if(b[0]!=d[0]&&b[1]!=d[1]){
+			cout<<"0"<<"0"<<"0";
+		}
+	}
+}
+	if(a!=c){
+		cout<<"0"<<"0"<<"0"<<"0";
+	}
+}

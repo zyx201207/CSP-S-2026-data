@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	freopen(travel.cpp,"r","stdin");
+	freopen(travel.cpp,"w","stdout");
+	int c1, c2, s1, s2;
+	cin>>c1>>s1>>c2>>s2;
+	if(c1 == c2)
+	{
+		cout<<"1";
+	}
+	else
+	{
+		cout<<"0";
+	}
+	cin>>s1>>s2;
+	if(s1 == s2)
+	{
+		cout<<"1";
+	}
+	else
+	{
+		cout<<"0";
+	}
+	return 0;
+}

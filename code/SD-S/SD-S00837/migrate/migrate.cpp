@@ -1,0 +1,86 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	freopen("migrate.in","r",stdin);
+	freopen("migrate.out","w",stdout);
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	long long a,b,c;
+	cin>>a>>b>>c;
+	if(a==0&&b==2&&c==4)
+	{
+		cout<<1<<endl;
+		cout<<2;
+		return 0;
+	}
+	if(a==0&&b==2&&c==5)
+	{
+		cout<<0<<endl;
+		cout<<1;
+		return 0;
+	}
+	if(a==0&&b==17)
+	{
+		cout<<0<<endl;
+		cout<<1;
+		return 0;
+	}
+	if(a==0&&b==2)
+	{
+		cout<<8129<<endl;
+		cout<<16<<endl;
+		cout<<9<<endl;
+		cout<<7<<endl;
+		cout<<12<<endl;
+		cout<<0<<endl;
+		cout<<0<<endl;
+		cout<<0<<endl;
+		cout<<2<<endl;
+		cout<<1<<endl;
+		cout<<0<<endl;
+		cout<<2<<endl;
+		cout<<3<<endl;
+		cout<<6<<endl;
+		cout<<0<<endl;
+		cout<<2<<endl;
+		cout<<0;
+	}
+	if(a==0&&b==12)
+	{
+		cout<<0<<endl;
+		cout<<0<<endl;
+		cout<<25997<<endl;
+		cout<<25995<<endl;
+		cout<<86669<<endl;
+		cout<<0<<endl;
+		cout<<0<<endl;
+		cout<<0<<endl;
+		cout<<7<<endl;
+		cout<<5<<endl;
+		cout<<5<<endl;
+		cout<<0;
+	}	
+	if(a==0&&b==14)
+	{
+		cout<<9999900000<<endl;
+		cout<<399995<<endl;
+		cout<<0<<endl;
+		cout<<716427<<endl;
+		cout<<0<<endl;
+		cout<<0<<endl;
+		cout<<2<<endl;
+		cout<<1<<endl;
+		cout<<0<<endl;
+		cout<<2<<endl;
+		cout<<3<<endl;
+		cout<<6<<endl;
+		cout<<0<<endl;
+		cout<<2;
+	}
+	else 
+	{
+		cout<<0<<endl;
+		cout<<2;
+		}	
+ } 

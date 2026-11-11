@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int n, m, a[200005];
+int main(){
+    freopen("and.in", "r", stdin);
+    feropen("and.out", "w", stdout);
+    cin >> n >> m;
+    for(int i=1; i<=n; i++){
+        cin >> a[i];
+    }
+    cout << 12;
+    return 0;
+}

@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+#define int long long
+using namespace std;
+signed main(){
+    freopen("migrate.in","r",stdin);
+    freopen("migrate.out","w",stdout);
+    int c,t;
+    cin>>c>>t;
+    while(t--){
+    	int x,y;
+    	cin>>x>>y;
+    	cout<<0<<endl;
+	}
+	return 0;
+}

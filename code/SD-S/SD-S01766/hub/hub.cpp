@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	freopen("point.in","r",stdin);
+	freopen("point.out","w",stdout);
+	int c,t;
+	cin>>c>>t;
+	int a1,a2;
+	cin>>a1>>a2;
+	int a3,a4;
+	cin>>a3>>a4;
+	int a5,a6;
+	cin>>a5>>a6;
+	int a7,a8;
+	cin>>a7>>a8;
+	int a9,a10;
+	cin>>a9>>a10;
+	int a11,a12;
+	cin>>a11>>a12;
+	int a13,a14;
+	cin>>a13>>a14;
+	int a15,a16;
+	cin>>a15>>a16;
+	int a17,a18;
+	cin>>a17>>a18;
+	int a19,a20;
+	cin>>a19>>a20;
+	int a21,a22;
+	cin>>a21>>a22;
+	int a23,a24;
+	cin>>a23>>a24;
+	int a25,a26;
+	cin>>a25>>a26;
+	int a27,a28;
+	cin>>a27>>a28;
+	int a29,a30;
+	cin>>a29>>a30;
+	cout<<1<<endl<<2;
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+
+
+void solve(){
+	int c,t;
+	cin>>c>>t;
+	while(t--){
+		cout<<0<<endl;
+	}
+}
+
+int main(){
+	freopen("hub.in","r",stdin);
+	freopen("hub.out","w",stdout);
+	
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+	
+	solve();
+	
+	fclose(stdin);
+	fclose(stdout);
+	return 0;
+}
+// qwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwq
+// qwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwqqwq
